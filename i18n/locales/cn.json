@@ -1,0 +1,146 @@
+{
+  "about": {
+    "advantages": {
+      "production": {
+        "desc": "实力厂家直供",
+        "title": "SEO服务"
+      },
+      "rd": {
+        "desc": "满足个性化需求",
+        "title": "独立研发定制"
+      },
+      "support": {
+        "desc": "全国联保服务",
+        "title": "技术支持"
+      },
+      "title": "为何选择我们"
+    },
+    "description": "无锡tbseo网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司，致力于为企业提供高品质的SEO解决方案。",
+    "full": {
+      "p1": "无锡tbseo网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。我们的SEO技术团队、内容策略团队以及数据分析团队都在互联网营销领域深耕多年，深谙搜索引擎算法规则与最佳实践。",
+      "p2": "我司专门从事搜索引擎优化(SEO)、搜索引擎营销(SEM)、内容营销、社交媒体运营、数据分析、网站优化等数字营销服务。提供从关键词研究、网站诊断、内容优化到外链建设、排名监控的全流程服务。",
+      "p3": "本公司秉承“客户至上”的经营理念；坚持“以数据驱动增长、用诚信和共赢发展企业”的经营方针。凭借专业、高效的SEO技术和精细化的运营服务来赢得客户的信赖与支持。选择“tbseo”，将会获得数据驱动的优化策略+专业技术团队+贴心售后服务于一体的高品质服务。",
+      "p4": "给我们一份信任，我们回报您满意的线上增长。"
+    },
+    "heading": "专业SEO服务商",
+    "mission": "我们的使命",
+    "missionText": "为客户提供高品质的SEO服务和专业的数字营销解决方案，成为中国领先的搜索引擎优化服务商。",
+    "stats": {
+      "cases": "成功案例",
+      "cities": "覆盖城市",
+      "clients": "服务客户",
+      "years": "年行业经验"
+    },
+    "subtitle": "走进tbseo",
+    "title": "关于我们",
+    "vision": "我们的愿景",
+    "visionText": "成为中国最受信赖的搜索引擎优化与数字营销服务品牌。"
+  },
+  "cases": {
+    "description": "3000+成功案例，项目遍及23个省118个城市，涵盖电商、教育、金融、科技等多个行业。",
+    "empty": "暂无案例",
+    "heading": "我们的成功案例",
+    "subtitle": "专业案例，值得信赖",
+    "title": "案例展示",
+    "viewDetails": "查看详情"
+  },
+  "contact": {
+    "address": "地址",
+    "chinaOffice": "公司总部",
+    "companyName": "无锡tbseo网络科技有限公司",
+    "description": "无论您有SEO需求还是数字营销咨询，我们的专业团队随时为您服务。",
+    "email": "邮箱",
+    "error": "发送失败，请重试。",
+    "heading": "获取专业解决方案",
+    "message": "留言内容",
+    "name": "姓名",
+    "phone": "电话",
+    "sendMessage": "发送消息",
+    "sending": "发送中…",
+    "sent": "消息已发送！我们会尽快回复您。",
+    "verifyLabel": "我不是机器人",
+    "verifyRequired": "请先完成验证",
+    "subtitle": "欢迎来电咨询",
+    "title": "联系我们",
+    "workingHours": "服务时间"
+  },
+  "float": {
+    "phone": "电话咨询",
+    "qq": "在线咨询",
+    "scan": "扫码关注我们",
+    "top": "回到顶部"
+  },
+  "footer": {
+    "addressLabel": "地 址",
+    "contactInfo": "联系方式",
+    "followUs": "扫码关注我们",
+    "gongan": "苏公网安备32021402003517号",
+    "icp": "苏ICP备2022048827",
+    "japanese": "可日语",
+    "landline": "座 机",
+    "mobile": "手 机",
+    "productCenter": "产品中心",
+    "quickLinks": "快速链接",
+    "techSupport": "技术支持: tbseo",
+    "website": "官 网"
+  },
+  "home": {
+    "features": {
+      "cases": {
+        "description": "项目遍及23个省118个城市",
+        "title": "3000+案例"
+      },
+      "custom": {
+        "description": "根据客户需求独立研发定制",
+        "title": "定制研发"
+      },
+      "experience": {
+        "description": "深耕SEO领域二十年",
+        "title": "20年经验"
+      },
+      "support": {
+        "description": "1对1专业服务，24小时响应",
+        "title": "全国联保"
+      }
+    },
+    "heroDescription": "无锡tbseo网络科技有限公司，致力于搜索引擎优化与数字营销服务，帮助企业提升在线可见度与业务增长。",
+    "heroSubtitle": "20年行业经验，专业SEO技术标准。提供搜索引擎优化、关键词排名、内容营销、外链建设等全系列数字营销服务，支持定制化方案。",
+    "latestCases": "精选案例",
+    "latestPosts": "最新资讯",
+    "viewAll": "查看全部",
+    "heroTitle": "专业SEO优化服务商"
+  },
+  "nav": {
+    "about": "关于tbseo",
+    "admin": "后台管理",
+    "cases": "案例展示",
+    "contact": "联系我们",
+    "docs": "文档",
+    "home": "首页",
+    "news": "新闻资讯",
+    "products": "产品中心",
+    "strengths": "核心优势"
+  },
+  "news": {
+    "description": "SEO行业最新动态、技术文章与优化指南。",
+    "empty": "暂无资讯",
+    "heading": "最新资讯",
+    "subtitle": "行业动态与技术分享",
+    "title": "新闻资讯"
+  },
+  "topbar": {
+    "hotline": "全国服务热线"
+  },
+  "contactExtra": {
+    "hotline": "全国服务热线：153-6521-5320（刘梅）",
+    "mobile": "手机：151-6157-3181（孙闪）",
+    "landline": "座机：153-6529-7658（可日语）",
+    "address": "地址：无锡市新吴区硕放中通路8号",
+    "website": "官网：https://tbseo.com",
+    "companyCard": "无锡tbseo网络科技有限公司"
+  },
+  "footerExtra": {
+    "techSupport": "技术支持: tbseo",
+    "companyDesc": "专业从事搜索引擎优化与数字营销服务，提供数据驱动的SEO解决方案。"
+  }
+}

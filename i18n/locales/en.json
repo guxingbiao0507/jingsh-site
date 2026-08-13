@@ -1,0 +1,203 @@
+{
+  "about": {
+    "advantages": {
+      "production": {
+        "desc": "Direct from manufacturer",
+        "title": "Equipment Manufacturing"
+      },
+      "rd": {
+        "desc": "Meeting personalized requirements",
+        "title": "Custom R&D"
+      },
+      "support": {
+        "desc": "Nationwide warranty service",
+        "title": "Technical Support"
+      },
+      "title": "Why Choose Us"
+    },
+    "description": "Wuxi Tbseo Network Technology Co., Ltd. specializes in SEO optimization and digital marketing services. We provide high-quality search engine optimization solutions for businesses.",
+    "full": {
+      "p1": "Wuxi Tbseo Network Technology Co., Ltd. is a technology company specializing in search engine optimization and digital marketing services. Our SEO technical team, content strategy team, and data analysis team have been deeply engaged in the internet marketing industry for many years, with thorough knowledge of search engine algorithms and best practices.",
+      "p2": "We specialize in search engine optimization (SEO), search engine marketing (SEM), content marketing, social media operations, data analysis, website optimization and other digital marketing services. We provide full-process services from keyword research, website diagnosis, content optimization to backlink building, and ranking monitoring.",
+      "p3": "The company upholds the business philosophy of \"customer first\" and adheres to the policy of \"winning the market with data-driven growth, developing the enterprise with integrity and win-win\". We earn the trust and support of our customers with professional, efficient SEO technology and refined operational services. Choosing \"tbseo\" gives you data-driven optimization strategies + professional technical team + thoughtful after-sales service.",
+      "p4": "Give us your trust, and we will repay you with satisfactory online growth."
+    },
+    "heading": "Professional SEO Agency",
+    "mission": "Our Mission",
+    "missionText": "To provide high-quality SEO services and professional digital marketing solutions, becoming China's leading search engine optimization agency.",
+    "stats": {
+      "cases": "Success Cases",
+      "cities": "Cities Covered",
+      "clients": "Clients Served",
+      "years": "Years Experience"
+    },
+    "subtitle": "About tbseo",
+    "title": "About Us",
+    "vision": "Our Vision",
+    "visionText": "Becoming China's most trusted search engine optimization and digital marketing service brand."
+  },
+  "cases": {
+    "description": "3000+ successful cases across electronics, food, chemical, logistics and more industries.",
+    "empty": "No cases yet",
+    "heading": "Our Success Stories",
+    "subtitle": "Professional Cases You Can Trust",
+    "title": "Cases",
+    "viewDetails": "View Details"
+  },
+  "contact": {
+    "address": "Address",
+    "chinaOffice": "Headquarters",
+    "companyName": "Wuxi Tbseo Network Technology Co., Ltd.",
+    "description": "Our professional team is ready to serve you with SEO needs and digital marketing inquiries.",
+    "email": "Email",
+    "error": "Failed to send. Please try again.",
+    "heading": "Get Professional Solutions",
+    "message": "Message",
+    "name": "Name",
+    "phone": "Phone",
+    "sendMessage": "Send Message",
+    "sending": "Sending…",
+    "sent": "Message sent! We'll get back to you soon.",
+    "verifyLabel": "I am not a robot",
+    "verifyRequired": "Please complete the verification first",
+    "subtitle": "We're Here to Help",
+    "title": "Contact Us",
+    "workingHours": "Working Hours"
+  },
+  "float": {
+    "phone": "Call Us",
+    "qq": "Online Chat",
+    "scan": "Scan to Follow",
+    "top": "Back to Top"
+  },
+  "footer": {
+    "addressLabel": "Address",
+    "contactInfo": "Contact",
+    "followUs": "Scan to Follow Us",
+    "gongan": "Su Gong'an Bei 32021402003517",
+    "icp": "Su ICP Bei 2022048827",
+    "japanese": "Japanese OK",
+    "landline": "Tel",
+    "mobile": "Mobile",
+    "productCenter": "Products",
+    "quickLinks": "Quick Links",
+    "techSupport": "Tech Support: tbseo",
+    "website": "Website"
+  },
+  "home": {
+    "features": {
+      "cases": {
+        "description": "Projects across 23 provinces, 118 cities",
+        "title": "3000+ Cases"
+      },
+      "custom": {
+        "description": "Independent development to meet needs",
+        "title": "Custom R&D"
+      },
+      "experience": {
+        "description": "Deep expertise in SEO and digital marketing",
+        "title": "20 Years Experience"
+      },
+      "support": {
+        "description": "1-on-1 professional service, 24/7 response",
+        "title": "National Support"
+      }
+    },
+    "heroDescription": "Wuxi Tbseo Network Technology Co., Ltd. specializes in SEO optimization and digital marketing services, helping businesses improve online visibility and growth.",
+    "heroSubtitle": "20 years of industry experience, professional SEO technology standards. We provide search engine optimization, keyword ranking, content marketing, backlink building and full-range digital marketing services with custom solutions.",
+    "heroTitle": "Professional SEO Optimization Agency",
+    "latestCases": "Featured Cases",
+    "latestPosts": "Latest News",
+    "viewAll": "View All"
+  },
+  "nav": {
+    "about": "About",
+    "admin": "Admin",
+    "cases": "Cases",
+    "contact": "Contact",
+    "docs": "Docs",
+    "home": "Home",
+    "news": "News",
+    "products": "Products",
+    "strengths": "Strengths"
+  },
+  "news": {
+    "description": "SEO industry latest dynamics, technical articles and optimization guides.",
+    "empty": "No news yet",
+    "heading": "Latest News",
+    "subtitle": "Industry News & Technical Insights",
+    "title": "News"
+  },
+  "topbar": {
+    "hotline": "National Service Hotline"
+  },
+  "services": {
+    "title": "Logistics Services",
+    "subtitle": "One-stop cross-border logistics solutions",
+    "heading": "Our Services",
+    "description": "Providing comprehensive logistics services from China to Southeast Asia, covering air freight, sea freight, warehousing, customs clearance, and last-mile delivery.",
+    "services_freight": {
+      "title": "International Freight",
+      "description": "Air and sea freight services from China to Thailand, Myanmar and other Southeast Asian countries with stable transit times and competitive rates.",
+      "time": "5-7 days"
+    },
+    "services_warehouse": {
+      "title": "Warehousing",
+      "description": "Warehousing centers in China and Southeast Asia providing receiving, storage, sorting, and packaging services.",
+      "time": "24/7"
+    },
+    "services_customs": {
+      "title": "Customs Clearance",
+      "description": "Professional customs clearance team familiar with regulations in China and Southeast Asian countries for fast cargo clearance.",
+      "time": "1-3 days"
+    },
+    "services_delivery": {
+      "title": "Last-Mile Delivery",
+      "description": "Last-mile delivery network covering major Southeast Asian cities with door-to-door service and real-time tracking.",
+      "time": "Same day"
+    },
+    "services_cargo": {
+      "title": "Bulk Cargo",
+      "description": "Specialized transport solutions for bulk commodities and large equipment, including special vehicles and lifting equipment.",
+      "time": "7-15 days"
+    },
+    "services_consulting": {
+      "title": "Logistics Consulting",
+      "description": "Professional consulting services including supply chain optimization, logistics planning, and cost analysis.",
+      "time": "By appointment"
+    }
+  },
+  "routes": {
+    "title": "Shipping Routes",
+    "subtitle": "Logistics routes from China to major Southeast Asian cities",
+    "heading": "Popular Routes",
+    "description": "We operate multiple international logistics routes from China to Southeast Asia, covering major border crossings in Yunnan and Guangdong, reaching Bangkok, Chiang Mai, Yangon and more.",
+    "chinaToThailand": {
+      "name": "China → Thailand",
+      "time": "5-7 days",
+      "desc": "Kunming → Chiang Mai, Guangzhou → Bangkok"
+    },
+    "chinaToMyanmar": {
+      "name": "China → Myanmar",
+      "time": "7-10 days",
+      "desc": "Kunming → Yangon, Kunming → Mandalay"
+    },
+    "thailandToMyanmar": {
+      "name": "Thailand → Myanmar",
+      "time": "3-5 days",
+      "desc": "Bangkok → Yangon, Bangkok → Mawlamyine"
+    }
+  },
+  "contactExtra": {
+    "hotline": "Hotline: 153-6521-5320 (Liu Mei)",
+    "mobile": "Mobile: 151-6157-3181 (Sun Shan)",
+    "landline": "Landline: 153-6529-7658 (Japanese OK)",
+    "address": "Address: No.8 Zhongtong Rd, Shuofang, Xinwu District, Wuxi City",
+    "website": "Website: https://tbseo.com",
+    "companyCard": "Wuxi Tbseo Network Technology Co., Ltd."
+  },
+  "footerExtra": {
+    "techSupport": "Tech Support: tbseo",
+    "companyDesc": "Specializing in SEO optimization and digital marketing services, providing data-driven SEO solutions."
+  }
+}

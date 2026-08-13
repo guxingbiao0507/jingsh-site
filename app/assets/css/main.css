@@ -1,0 +1,464 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-yf-bg: hsl(222 47% 4%);
+  --color-yf-bg2: hsl(220 40% 7%);
+  --color-yf-panel: hsl(218 34% 9%);
+  --color-yf-ink: hsl(210 40% 96%);
+  --color-yf-ink-dim: hsl(215 20% 62%);
+  --color-yf-cyan: hsl(187 92% 55%);
+  --color-yf-blue: hsl(217 100% 62%);
+  --color-yf-line: hsl(213 30% 18%);
+}
+
+/* Frontend site theme tokens — switch between dark / light */
+:root {
+  --site-bg: #f8fafc;
+  --site-bg2: #f1f5f9;
+  --site-panel: #ffffff;
+  --site-ink: #1e293b;
+  --site-ink-dim: #64748b;
+  --site-line: hsl(214 32% 91%);
+  --site-overlay: hsl(0 0% 100% / 0.88);
+}
+.dark {
+  --site-bg: hsl(222 47% 4%);
+  --site-bg2: hsl(220 40% 7%);
+  --site-panel: hsl(218 34% 9%);
+  --site-ink: hsl(210 40% 96%);
+  --site-ink-dim: hsl(215 20% 62%);
+  --site-line: hsl(213 30% 18%);
+  --site-overlay: hsl(222 47% 4% / 0.82);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', 'Noto Sans SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Light mode body defaults */
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+/* Dark mode body */
+.dark body {
+  background-color: hsl(222 47% 4%);
+  color: hsl(210 40% 96%);
+}
+
+::selection {
+  background: hsl(187 92% 55% / 0.3);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: hsl(222 47% 4%);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(213 30% 18%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(187 92% 55% / 0.5);
+}
+
+/* === Design System Typography === */
+.font-mono-tech {
+  font-family: 'JetBrains Mono', 'Noto Sans SC', monospace;
+}
+
+/* === Design System Layout === */
+.container-x {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 640px) { .container-x { padding-left: 2rem; padding-right: 2rem; } }
+@media (min-width: 1024px) { .container-x { padding-left: 3rem; padding-right: 3rem; } }
+
+/* === Design System Components === */
+.kicker {
+  font-family: 'JetBrains Mono', 'Noto Sans SC', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: hsl(187 92% 55%);
+}
+@media (min-width: 640px) { .kicker { font-size: 0.75rem; } }
+
+.hairline {
+  border-color: hsl(213 30% 18%);
+}
+
+.panel {
+  background: linear-gradient(160deg, hsl(218 34% 9% / 0.9), hsl(220 40% 7% / 0.9));
+  border: 1px solid hsl(213 30% 18%);
+}
+html:not(.dark) .panel {
+  background: linear-gradient(160deg, hsl(210 40% 98% / 0.95), hsl(210 40% 96% / 0.95));
+  border: 1px solid hsl(214 32% 91%);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #fff 20%, hsl(187 92% 55%) 60%, hsl(217 100% 62%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+html:not(.dark) .text-gradient {
+  background: linear-gradient(100deg, hsl(222 47% 11%) 20%, hsl(187 92% 40%) 60%, hsl(217 100% 50%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(hsl(213 30% 18% / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(213 30% 18% / 0.5) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+html:not(.dark) .grid-bg {
+  background-image:
+    linear-gradient(hsl(214 32% 91% / 0.7) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(214 32% 91% / 0.7) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* === Buttons === */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  color: hsl(222 47% 4%);
+  background: linear-gradient(100deg, hsl(187 92% 55%), hsl(217 100% 62%));
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  color: hsl(222 47% 4%);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  border: 1px solid hsl(187 92% 55% / 0.4);
+  color: hsl(187 92% 55%);
+  background: transparent;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  background: hsl(187 92% 55% / 0.1);
+  border-color: hsl(187 92% 55%);
+  color: hsl(187 92% 55%);
+}
+
+/* === Corner Frame === */
+.corner-frame {
+  position: relative;
+}
+.corner-frame::before,
+.corner-frame::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: hsl(187 92% 55%);
+  border-style: solid;
+  transition: all 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.corner-frame::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+.corner-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* === Animations === */
+@keyframes marquee-x {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+.animate-marquee {
+  animation: marquee-x 32s linear infinite;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 hsl(187 92% 55% / 0.6);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 7px hsl(187 92% 55% / 0);
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+.scanline {
+  position: absolute;
+  left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, hsl(187 92% 55% / 0.06), transparent);
+  animation: scan 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flow {
+  to { background-position-x: 48px; }
+}
+.flow-line {
+  height: 2px;
+  background-image: repeating-linear-gradient(90deg, hsl(187 92% 55% / 0.7) 0 12px, transparent 12px 24px);
+  background-size: 48px 2px;
+  animation: flow 1.2s linear infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Scroll reveal transition classes (used by Reveal component) */
+.reveal-enter {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+.reveal-enter-active {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .scanline, .flow-line, .animate-floaty, .pulse-dot {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* === Frontend Light Mode Overrides ===
+   The frontend site is designed dark-first with many inline styles.
+   html:not(.dark) targets light mode (dark class is on <html>). */
+html:not(.dark) [style*="background: hsl(222 47% 4%)"],
+html:not(.dark) [style*="background:hsl(222 47% 4%)"],
+html:not(.dark) [style*="background: hsl(220 40% 7%)"],
+html:not(.dark) [style*="background:hsl(220 40% 7%)"] {
+  background: #f8fafc !important;
+}
+html:not(.dark) [style*="background: hsl(222 47% 4% /"],
+html:not(.dark) [style*="background:hsl(222 47% 4% /"],
+html:not(.dark) [style*="background: hsl(222 47% 4%/"],
+html:not(.dark) [style*="background:hsl(222 47% 4%/"] {
+  background: hsl(0 0% 100% / 0.88) !important;
+}
+html:not(.dark) [style*="background: hsl(218 34% 9%"],
+html:not(.dark) [style*="background:hsl(218 34% 9%"] {
+  background: #ffffff !important;
+}
+html:not(.dark) [style*="border-color: hsl(213 30% 18%)"],
+html:not(.dark) [style*="border-color:hsl(213 30% 18%)"] {
+  border-color: hsl(214 32% 91%) !important;
+}
+html:not(.dark) [style*="background: hsl(213 30% 18%)"],
+html:not(.dark) [style*="background:hsl(213 30% 18%)"] {
+  background: hsl(214 32% 91%) !important;
+}
+html:not(.dark) [style*="color: hsl(210 40% 96%)"],
+html:not(.dark) [style*="color:hsl(210 40% 96%)"] {
+  color: #1e293b !important;
+}
+/* Hero gradient overlay for light mode */
+html:not(.dark) [style*="linear-gradient(to top, hsl(222 47% 4%)"],
+html:not(.dark) [style*="linear-gradient(to top,hsl(222 47% 4%)"] {
+  background: linear-gradient(to top, #f8fafc 2%, transparent 35%) !important;
+}
+html:not(.dark) [style*="linear-gradient(to bottom, hsl(222 47% 4%"],
+html:not(.dark) [style*="linear-gradient(to bottom,hsl(222 47% 4%"] {
+  background: linear-gradient(to bottom, hsl(0 0% 100% / 0.7), #f8fafc) !important;
+}
+/* Panel backgrounds in light mode */
+html:not(.dark) [style*="linear-gradient(160deg, hsl(218 34% 9%"],
+html:not(.dark) [style*="linear-gradient(160deg,hsl(218 34% 9%"] {
+  background: linear-gradient(160deg, hsl(210 40% 98% / 0.95), hsl(210 40% 96% / 0.95)) !important;
+}
+/* Section background overrides */
+html:not(.dark) section[style*="background: hsl(220 40% 7%)"],
+html:not(.dark) section[style*="background:hsl(220 40% 7%)"],
+html:not(.dark) section[style*="background: hsl(222 47% 4%)"],
+html:not(.dark) section[style*="background:hsl(222 47% 4%)"] {
+  background: #f1f5f9 !important;
+}
+/* Alternating section backgrounds for visual rhythm */
+html:not(.dark) section[style*="background: hsl(220 40% 7%)"]:nth-of-type(even),
+html:not(.dark) section[style*="background:hsl(220 40% 7%)"]:nth-of-type(even) {
+  background: #ffffff !important;
+}
+/* Grid cell backgrounds in strength cards etc. */
+html:not(.dark) div[style*="background: hsl(220 40% 7%)"],
+html:not(.dark) div[style*="background:hsl(220 40% 7%)"] {
+  background: #ffffff !important;
+}
+/* Text adjustments for light mode — use Tailwind dark: variants where possible,
+   but override utility classes that lack dark: prefix in existing code */
+html:not(.dark) .text-white {
+  color: #1e293b;
+}
+html:not(.dark) .text-slate-200 {
+  color: #334155;
+}
+html:not(.dark) .text-slate-300 {
+  color: #475569;
+}
+/* Restore white text on gradient backgrounds (buttons, badges, logo) */
+html:not(.dark) .btn-primary {
+  color: hsl(222 47% 4%);
+}
+html:not(.dark) [style*="background: linear-gradient(135deg, hsl(187"],
+html:not(.dark) [style*="background:linear-gradient(135deg, hsl(187"],
+html:not(.dark) [style*="background:linear-gradient(135deg,hsl(187"] {
+  color: hsl(222 47% 4%) !important;
+}
+/* Additional dark panels/overlays that need light conversion */
+html:not(.dark) [style*="background:hsl(220 40% 7% /"],
+html:not(.dark) [style*="background: hsl(220 40% 7% /"] {
+  background: hsl(0 0% 100% / 0.85) !important;
+}
+html:not(.dark) [style*="background:hsl(222 47% 4% / 0.85)"],
+html:not(.dark) [style*="background: hsl(222 47% 4% / 0.85)"] {
+  background: hsl(0 0% 100% / 0.92) !important;
+}
+html:not(.dark) [style*="background:hsl(222 47% 4% / 0.6)"],
+html:not(.dark) [style*="background: hsl(222 47% 4% / 0.6)"] {
+  background: hsl(210 40% 96% / 0.9) !important;
+}
+html:not(.dark) [style*="background:hsl(220 40% 10%)"],
+html:not(.dark) [style*="background: hsl(220 40% 10%)"] {
+  background: #ffffff !important;
+}
+html:not(.dark) [style*="color:hsl(215 20% 62%)"],
+html:not(.dark) [style*="color: hsl(215 20% 62%)"] {
+  color: #64748b !important;
+}
+html:not(.dark) [style*="color:hsl(187 92% 55%)"],
+html:not(.dark) [style*="color: hsl(187 92% 55%)"] {
+  color: hsl(187 92% 45%) !important;
+}
+html:not(.dark) [style*="border-color:hsl(187 92% 55%"],
+html:not(.dark) [style*="border-color: hsl(187 92% 55%"] {
+  border-color: hsl(187 92% 45% / 0.5) !important;
+}
+/* Gradient overlays that cover hero images — keep readable over photo */
+html:not(.dark) [style*="background:linear-gradient(to top, hsl(222 47% 4%"],
+html:not(.dark) [style*="background: linear-gradient(to top, hsl(222 47% 4%"] {
+  background: linear-gradient(to top, #f8fafc 2%, transparent 35%) !important;
+}
+html:not(.dark) [style*="background:linear-gradient(100deg, hsl(222 47% 4%"],
+html:not(.dark) [style*="background: linear-gradient(100deg, hsl(222 47% 4%"] {
+  background: linear-gradient(100deg, hsl(0 0% 100% / 0.92) 0%, hsl(0 0% 100% / 0.7) 45%, hsl(0 0% 100% / 0.3) 100%) !important;
+}
+html:not(.dark) [style*="background:linear-gradient(to top, hsl(222 47% 4% / 0.9"],
+html:not(.dark) [style*="background: linear-gradient(to top, hsl(222 47% 4% / 0.9"] {
+  background: linear-gradient(to top, hsl(0 0% 100% / 0.9) 0%, transparent 55%) !important;
+}
+html:not(.dark) [style*="background:linear-gradient(to top, hsl(222 47% 4% / 0.85"],
+html:not(.dark) [style*="background: linear-gradient(to top, hsl(222 47% 4% / 0.85"] {
+  background: linear-gradient(to top, hsl(0 0% 100% / 0.85), transparent 60%) !important;
+}
+html:not(.dark) [style*="background:linear-gradient(135deg, hsl(217 100% 62% / 0.15"],
+html:not(.dark) [style*="background: linear-gradient(135deg, hsl(217 100% 62% / 0.15"] {
+  background: linear-gradient(135deg, hsl(217 100% 62% / 0.08), transparent 50%) !important;
+}
+/* Card overlays with dark bg + border in light mode */
+html:not(.dark) [style*="border-color:hsl(213 30% 18%)"][style*="background:hsl(222 47% 4% / 0.7)"] {
+  border-color: hsl(214 32% 91%) !important;
+  background: hsl(0 0% 100% / 0.85) !important;
+}
+html:not(.dark) [style*="border-color:hsl(213 30% 18%)"][style*="background:hsl(220 40% 7%)"] {
+  border-color: hsl(214 32% 91%) !important;
+  background: #ffffff !important;
+}
+/* hairline border color in light mode */
+html:not(.dark) .hairline {
+  border-color: hsl(214 32% 91%);
+}
+/* Scanline lighter in light mode */
+html:not(.dark) .scanline {
+  background: linear-gradient(to bottom, transparent, hsl(187 92% 55% / 0.03), transparent);
+}
+
+/* === Prose Dark (MDC content rendering) === */
+.prose-dark p { margin-bottom: 1.25rem; }
+.prose-dark h2,
+.prose-dark h3 { color: white; font-weight: 700; margin: 2rem 0 1rem; }
+.prose-dark img { max-width: 100%; border-radius: 4px; margin: 1.5rem 0; }
+.prose-dark a { color: hsl(187 92% 55%); text-decoration: underline; }
+.prose-dark ul,
+.prose-dark ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-dark li { margin-bottom: 0.5rem; }
+
+/* === Prose Light === */
+html:not(.dark) .prose-dark h2,
+html:not(.dark) .prose-dark h3 { color: #1e293b; }

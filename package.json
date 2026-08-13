@@ -1,0 +1,40 @@
+{
+  "name": "tbseo-site",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "build:cf": "cross-env NITRO_PRESET=cloudflare_pages nuxt build && node node_modules/nuxtcms/scripts/patch-worker.mjs",
+    "deploy": "node node_modules/nuxtcms/scripts/deploy.mjs",
+    "deploy:migrate": "node node_modules/nuxtcms/scripts/deploy.mjs --migrate",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "@nuxt/ui": "^4.9.0",
+    "@nuxtjs/mdc": "^0.22.1",
+    "drizzle-orm": "^0.45.2",
+    "jose": "^6.2.3",
+    "nuxt": "^4.4.8",
+    "nuxt-auth-utils": "^0.5.29",
+    "nuxtcms": "github:guxingbiao0507/nuxtcms",
+    "tailwindcss": "^4.3.2",
+    "vue": "^3.5.39",
+    "vue-router": "^5.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@adonisjs/hash": "^10.1.0",
+    "@cloudflare/workers-types": "^5.20260813.1",
+    "@nuxt/content": "^3.15.0",
+    "@nuxtjs/i18n": "^10.4.1",
+    "@nuxtjs/seo": "^5.3.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "better-sqlite3": "^13.0.3",
+    "cross-env": "^10.1.0",
+    "drizzle-kit": "^0.18.1",
+    "workerd": "^1.20260813.1",
+    "wrangler": "^4.110.0"
+  }
+}
