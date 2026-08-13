@@ -37,18 +37,18 @@ export async function runInstall(db: DB, input: { name: string; email: string; p
   )
   const adminId = adminResult.lastInsertRowid
 
-  const siteName = input.siteName || '无锡tbseo网络科技有限公司'
+  const siteName = input.siteName || '无锡jingsh网络科技有限公司'
   const siteDescription = input.siteDescription || '专业搜索引擎优化与数字营销服务商，20年行业经验，3000+成功案例'
 
   // Settings use drizzle (no auto-increment issues)
   const defaultSettings: Record<string, string> = {
     siteName,
     siteDescription,
-    footerText: `© ${now.getFullYear()} 无锡tbseo网络科技有限公司. 专业SEO优化服务商.`,
+    footerText: `© ${now.getFullYear()} 无锡jingsh网络科技有限公司. 专业SEO优化服务商.`,
     companyPhone: '153-6521-5320',
     companyPhone2: '151-6157-3181',
     companyPhone3: '153-6529-7658',
-    companyEmail: 'info@tbseo.com',
+    companyEmail: 'info@jingsh.com',
     companyAddress: '无锡市新吴区硕放中通路8号',
     companyHours: 'Mon-Fri 8:00-17:00',
     postsPerPage: '9',
@@ -139,8 +139,8 @@ export async function runInstall(db: DB, input: { name: string; email: string; p
   // About page
   await rawExec(`INSERT INTO cms_posts (title, slug, excerpt, content, status, type, category_id, author_id, tags)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-    ['关于tbseo', 'about', '无锡tbseo网络科技有限公司 — 专业从事搜索引擎优化与数字营销服务的科技公司。',
-    '# 关于tbseo\n\n无锡tbseo网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。',
+    ['关于jingsh', 'about', '无锡jingsh网络科技有限公司 — 专业从事搜索引擎优化与数字营销服务的科技公司。',
+    '# 关于jingsh\n\n无锡jingsh网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。',
     'published', 'page', null, adminId, ''])
 
   return { adminId }

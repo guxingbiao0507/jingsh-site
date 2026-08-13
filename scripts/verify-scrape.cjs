@@ -9,8 +9,8 @@ for (const [t, arr] of Object.entries(byType)) {
   console.log(`${t}: ${arr.length} pages | markdown>50char: ${withMd} | with cover: ${withCover}`)
 }
 
-console.log('\n=== NEWS tbseozx/21 markdown (first 700) ===')
-const n = data.find(r => r.url.includes('tbseozx/21'))
+console.log('\n=== NEWS jingshzx/21 markdown (first 700) ===')
+const n = data.find(r => r.url.includes('jingshzx/21'))
 console.log(n.markdown.slice(0, 700))
 
 console.log('\n=== PRODUCT g/34 markdown (first 300) ===')
@@ -18,10 +18,10 @@ const p = data.find(r => r.url.includes('/g/34'))
 console.log(p.markdown.slice(0, 300))
 console.log('... cover:', p.coverImage)
 
-console.log('\n=== CASE tbseo/17 markdown (first 300) ===')
-const c = data.find(r => r.url.includes('tbseo/17'))
+console.log('\n=== CASE jingsh/17 markdown (first 300) ===')
+const c = data.find(r => r.url.includes('jingsh/17'))
 console.log(c.markdown.slice(0, 300))
 console.log('... cover:', c.coverImage)
 
-const broken = data.filter(r => r.markdown.includes('tbseo.com'))
+const broken = data.filter(r => r.markdown.includes('jingsh.com'))
 console.log('\nMarkdown still referencing external wxyfwl.com:', broken.length)

@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   extends: ['nuxtcms'],
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://tbseo.com',
-    name: 'tbseo',
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://jingsh.com',
+    name: 'jingsh',
   },
 
   i18n: {
@@ -32,8 +32,8 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preload', href: '/fonts/fonts.css', as: 'style', onload: 'this.onload=null;this.rel="stylesheet"' },
-        { rel: 'alternate', type: 'application/json', title: 'tbseo — JSON Feed', href: '/api/public/feed.json' },
-        { rel: 'alternate', type: 'application/rss+xml', title: 'tbseo — RSS Feed', href: '/api/public/feed.xml' },
+        { rel: 'alternate', type: 'application/json', title: 'jingsh — JSON Feed', href: '/api/public/feed.json' },
+        { rel: 'alternate', type: 'application/rss+xml', title: 'jingsh — RSS Feed', href: '/api/public/feed.xml' },
       ],
     },
   },

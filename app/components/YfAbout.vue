@@ -13,7 +13,7 @@ const { go } = useYfNav()
         <YfReveal>
           <div class="relative corner-frame">
             <div class="relative overflow-hidden">
-              <img src="/assets/about.jpg" alt="tbseo smart office" class="w-full aspect-[16/10] object-cover" />
+              <img src="/assets/about.jpg" alt="jingsh smart office" class="w-full aspect-[16/10] object-cover" />
               <div class="absolute inset-0" style="background: linear-gradient(135deg, hsl(217 100% 62% / 0.15), transparent 50%)" />
             </div>
             <!-- floating badge -->

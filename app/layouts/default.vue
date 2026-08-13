@@ -109,9 +109,9 @@ function goSection(id: string) {
             "
           >TB</div>
           <div class="text-left leading-tight">
-            <div class="text-[15px] font-bold tracking-wide text-slate-900 dark:text-white">{{ li('tbseo', 'TBSEO') }}</div>
+            <div class="text-[15px] font-bold tracking-wide text-slate-900 dark:text-white">{{ li('jingsh', 'JINGSH') }}</div>
             <div class="font-mono-tech text-[9px] tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
-              {{ li('TBSEO NETWORK TECH.', '无锡tbseo网络科技') }}
+              {{ li('JINGSH NETWORK TECH.', '无锡jingsh网络科技') }}
             </div>
           </div>
         </NuxtLink>
@@ -265,7 +265,7 @@ function goSection(id: string) {
                   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
                 "
               >YF</div>
-              <div class="text-base font-bold text-slate-900 dark:text-white">{{ site?.settings.siteName || li('无锡tbseo网络科技有限公司', 'Wuxi Tbseo Network Technology Co., Ltd.') }}</div>
+              <div class="text-base font-bold text-slate-900 dark:text-white">{{ site?.settings.siteName || li('无锡jingsh网络科技有限公司', 'Wuxi Jingsh Network Technology Co., Ltd.') }}</div>
             </div>
             <p class="max-w-sm text-[13px] leading-relaxed text-slate-500">
               {{ li('专业从事搜索引擎优化与数字营销服务，提供数据驱动的SEO解决方案。', 'A professional SEO and digital marketing agency — delivering data-driven search optimization solutions.') }}
@@ -316,7 +316,7 @@ function goSection(id: string) {
       <div class="border-t" style="border-color: var(--site-line)">
         <div class="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-[11px] text-slate-600">
-            {{ li('无锡tbseo网络科技有限公司 版权所有', 'Wuxi Tbseo Network Technology Co., Ltd. All rights reserved.') }}
+            {{ li('无锡jingsh网络科技有限公司 版权所有', 'Wuxi Jingsh Network Technology Co., Ltd. All rights reserved.') }}
           </p>
           <div class="flex items-center gap-4 text-[11px] text-slate-600">
             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer" class="hover:text-slate-400 transition-colors">苏ICP备2022048827号</a>

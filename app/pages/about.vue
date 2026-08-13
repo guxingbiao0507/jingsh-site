@@ -24,7 +24,7 @@ function li(zh: string, en: string) { return locale.value === 'en' ? en : zh }
   <div>
     <section class="border-b hairline flex flex-col items-center justify-center" style="min-height:260px; border-color: hsl(213 30% 18%); background: hsl(220 40% 7%)">
       <div class="container-x py-16 text-center">
-        <div class="kicker mb-4">{{ li('关于tbseo', 'ABOUT TBSEO') }}</div>
+        <div class="kicker mb-4">{{ li('关于jingsh', 'ABOUT JINGSH') }}</div>
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">{{ t('about.title') }}</h1>
         <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">{{ t('about.subtitle') }}</p>
       </div>

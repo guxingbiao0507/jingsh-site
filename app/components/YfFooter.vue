@@ -25,7 +25,7 @@ const telHref = (num: string) => `tel:${num.replace(/-/g, '')}`
               TB
             </div>
             <div class="text-base font-bold text-slate-900 dark:text-white">
-              {{ lang === 'zh' ? '无锡tbseo网络科技有限公司' : 'Wuxi Tbseo Network Technology Co., Ltd.' }}
+              {{ lang === 'zh' ? '无锡jingsh网络科技有限公司' : 'Wuxi Jingsh Network Technology Co., Ltd.' }}
             </div>
           </div>
           <p class="max-w-sm text-[13px] leading-relaxed text-slate-500">{{ t(ui.footer.desc) }}</p>

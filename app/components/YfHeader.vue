@@ -70,10 +70,10 @@ const goContact = () => {
         </div>
         <div class="text-left leading-tight">
           <div class="text-[15px] font-bold tracking-wide text-slate-900 dark:text-white">
-            {{ lang === 'zh' ? 'tbseo' : 'TBSEO' }}
+            {{ lang === 'zh' ? 'jingsh' : 'JINGSH' }}
           </div>
           <div class="font-mono-tech text-[9px] tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
-            {{ lang === 'zh' ? 'TBSEO NETWORK TECH.' : '无锡tbseo网络科技' }}
+            {{ lang === 'zh' ? 'JINGSH NETWORK TECH.' : '无锡jingsh网络科技' }}
           </div>
         </div>
       </button>

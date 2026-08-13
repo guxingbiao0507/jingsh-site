@@ -121,8 +121,8 @@ export const ui = {
     products: { zh: '产品中心', en: 'Products' },
     strengths: { zh: '核心优势', en: 'Strengths' },
     cases: { zh: '成功案例', en: 'Cases' },
-    about: { zh: '关于tbseo', en: 'About' },
-    news: { zh: 'tbseo资讯', en: 'News' },
+    about: { zh: '关于jingsh', en: 'About' },
+    news: { zh: 'jingsh资讯', en: 'News' },
     contact: { zh: '联系我们', en: 'Contact' },
   },
   hero: {
@@ -130,8 +130,8 @@ export const ui = {
     titleA: { zh: '智能优化', en: 'Smart SEO,' },
     titleB: { zh: '驱动品牌增长', en: 'Driving Growth' },
     sub: {
-      zh: '无锡tbseo网络科技有限公司 —— 专业从事搜索引擎优化与数字营销服务，传承专业SEO技术精髓，提供关键词优化、内容营销、外链建设一站式解决方案。',
-      en: 'Wuxi Tbseo Network Technology Co., Ltd. — a professional SEO and digital marketing agency, delivering one-stop keyword optimization, content marketing, and link building solutions.',
+      zh: '无锡jingsh网络科技有限公司 —— 专业从事搜索引擎优化与数字营销服务，传承专业SEO技术精髓，提供关键词优化、内容营销、外链建设一站式解决方案。',
+      en: 'Wuxi Jingsh Network Technology Co., Ltd. — a professional SEO and digital marketing agency, delivering one-stop keyword optimization, content marketing, and link building solutions.',
     },
     cta1: { zh: '浏览产品中心', en: 'Explore Services' },
     cta2: { zh: '获取免费方案', en: 'Get a Free Proposal' },
@@ -165,8 +165,8 @@ export const ui = {
     detail: { zh: '咨询此产品', en: 'Inquire' },
   },
   why: {
-    kicker: { zh: '核心优势', en: 'WHY TBSEO' },
-    title: { zh: 'tbseo · 值得您的选择', en: 'Why Choose tbseo' },
+    kicker: { zh: '核心优势', en: 'WHY JINGSH' },
+    title: { zh: 'jingsh · 值得您的选择', en: 'Why Choose jingsh' },
     items: [
       { title: { zh: '专业团队', en: 'Expert Team' }, desc: { zh: '深耕SEO领域二十年，3000+ 成功案例，服务遍及 23 省 118 城', en: '20 years in SEO, 3000+ projects across 118 cities in 23 provinces' } },
       { title: { zh: '定制方案', en: 'Custom Strategy' }, desc: { zh: '专业SEO技术团队，根据企业需求独立制定优化策略，满足个性化需求', en: 'Professional SEO team, independently crafting strategies to your requirements' } },
@@ -178,15 +178,15 @@ export const ui = {
     kicker: { zh: '成功案例', en: 'CASE STUDIES' },
     title: { zh: '3000+ 项目的实战验证', en: 'Proven in 3000+ Projects' },
     sub: {
-      zh: '从电商零售到教育金融，从科技企业到传统行业，tbseo服务运行在全国各行各业的企业中',
-      en: 'From e-commerce to education and finance, tech enterprises to traditional industries — tbseo services power businesses nationwide',
+      zh: '从电商零售到教育金融，从科技企业到传统行业，jingsh服务运行在全国各行各业的企业中',
+      en: 'From e-commerce to education and finance, tech enterprises to traditional industries — jingsh services power businesses nationwide',
     },
   },
   about: {
-    kicker: { zh: '关于tbseo', en: 'ABOUT TBSEO' },
+    kicker: { zh: '关于jingsh', en: 'ABOUT JINGSH' },
     title: { zh: '专业SEO × 数字增长', en: 'Professional SEO × Digital Growth' },
-    p1: { zh: '无锡tbseo网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。公司的SEO技术团队、内容策略团队以及数据分析团队都在互联网营销领域深耕10年以上，深谙搜索引擎算法规则与最佳实践。', en: 'Wuxi Tbseo Network Technology Co., Ltd. specializes in search engine optimization and digital marketing services. Our SEO technical team, content strategy team and data analysis team each bring 10+ years of experience in internet marketing.' },
-    p2: { zh: '公司秉承「客户至上」的经营理念，坚持以数据驱动增长、用诚信和共赢发展企业。选择tbseo，您将获得专业SEO技术、精准数据分析与贴心售后于一体的高品质服务。', en: 'Adhering to a customer-first philosophy, we win with data-driven growth, and grow through integrity and mutual success. Choosing tbseo means professional SEO technology, precise data analytics and thoughtful service.' },
+    p1: { zh: '无锡jingsh网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。公司的SEO技术团队、内容策略团队以及数据分析团队都在互联网营销领域深耕10年以上，深谙搜索引擎算法规则与最佳实践。', en: 'Wuxi Jingsh Network Technology Co., Ltd. specializes in search engine optimization and digital marketing services. Our SEO technical team, content strategy team and data analysis team each bring 10+ years of experience in internet marketing.' },
+    p2: { zh: '公司秉承「客户至上」的经营理念，坚持以数据驱动增长、用诚信和共赢发展企业。选择jingsh，您将获得专业SEO技术、精准数据分析与贴心售后于一体的高品质服务。', en: 'Adhering to a customer-first philosophy, we win with data-driven growth, and grow through integrity and mutual success. Choosing jingsh means professional SEO technology, precise data analytics and thoughtful service.' },
     points: [
       { zh: '专业SEO标准', en: 'Professional SEO standards' },
       { zh: '10 年以上经验团队', en: 'Team with 10+ years of experience' },
@@ -195,7 +195,7 @@ export const ui = {
     ],
   },
   newsSec: {
-    kicker: { zh: 'tbseo资讯', en: 'INSIGHTS' },
+    kicker: { zh: 'jingsh资讯', en: 'INSIGHTS' },
     title: { zh: '技术分享与行业洞察', en: 'Technical Insights' },
     more: { zh: '阅读文章', en: 'Read Article' },
   },
@@ -223,6 +223,6 @@ export const ui = {
     contactTitle: { zh: '联系方式', en: 'Contact' },
     icp: '苏ICP备2022048827号',
     psb: '苏公网安备32021402003517号',
-    rights: { zh: '无锡tbseo网络科技有限公司 版权所有', en: 'Wuxi Tbseo Network Technology Co., Ltd. All rights reserved.' },
+    rights: { zh: '无锡jingsh网络科技有限公司 版权所有', en: 'Wuxi Jingsh Network Technology Co., Ltd. All rights reserved.' },
   },
 }

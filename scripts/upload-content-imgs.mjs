@@ -7,7 +7,7 @@ import { join, relative } from 'node:path'
 
 const CF_TOKEN = readFileSync(join(process.cwd(), '.cloudflare.env'), 'utf8').match(/CLOUDFLARE_API_TOKEN=(\S+)/)[1]
 const ACCOUNT = readFileSync(join(process.cwd(), '.cloudflare.env'), 'utf8').match(/CLOUDFLARE_ACCOUNT_ID=(\S+)/)[1]
-const BUCKET = 'tbseo'
+const BUCKET = 'jingsh'
 const ROOT = join(process.cwd(), '.data', 'uploads', 'uploads', 'uploads')
 const BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/r2/buckets/${BUCKET}/objects`
 

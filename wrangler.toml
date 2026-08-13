@@ -7,14 +7,14 @@
 #
 # The Nuxt server reads this binding as event.context.cloudflare.env.DB.
 
-name = "tbseo"
+name = "jingsh"
 compatibility_date = "2025-07-15"
 compatibility_flags = ["nodejs_compat_v2"]
 pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "tbseo"
+database_name = "jingsh"
 database_id = "b8bd89ac-2760-43e6-9cb3-7bd5ee5675b0"
 migrations_dir = "server/database/migrations"
 
@@ -22,4 +22,4 @@ migrations_dir = "server/database/migrations"
 # Create it once with:  pnpm exec wrangler r2 bucket create nuxtcms-media
 [[r2_buckets]]
 binding = "BUCKET"
-bucket_name = "tbseo"
+bucket_name = "jingsh"

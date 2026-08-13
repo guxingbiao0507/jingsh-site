@@ -3,7 +3,7 @@ const { t, lang } = useYfLang()
 const { go } = useYfNav()
 
 useSeoMeta({
-  title: () => t({ zh: '关于tbseo — 无锡tbseo网络科技有限公司', en: 'About tbseo — Wuxi Tbseo Network Technology' }),
+  title: () => t({ zh: '关于jingsh — 无锡jingsh网络科技有限公司', en: 'About jingsh — Wuxi Jingsh Network Technology' }),
   description: () => t({ zh: '20年SEO经验，3000+项目案例，数据驱动的专业优化', en: '20 years SEO experience, 3000+ projects, data-driven optimization' }),
 })
 </script>
@@ -11,9 +11,9 @@ useSeoMeta({
 <template>
   <div>
     <YfSubHero
-      :kicker="{ zh: '关于tbseo', en: 'ABOUT TBSEO' }"
+      :kicker="{ zh: '关于jingsh', en: 'ABOUT JINGSH' }"
       :title="{ zh: '专业SEO × 数字增长', en: 'Professional SEO × Digital Growth' }"
-      :crumbs="[{ label: { zh: '关于tbseo', en: 'About' } }]"
+      :crumbs="[{ label: { zh: '关于jingsh', en: 'About' } }]"
     >
       <template #extra>
         <button class="btn-ghost mt-6" @click="go({ page: 'contact' })">
@@ -31,7 +31,7 @@ useSeoMeta({
           <YfReveal>
             <div class="relative corner-frame">
               <div class="relative overflow-hidden">
-                <img src="/assets/about.jpg" alt="tbseo office" class="w-full aspect-[16/10] object-cover" />
+                <img src="/assets/about.jpg" alt="jingsh office" class="w-full aspect-[16/10] object-cover" />
                 <div class="absolute inset-0" style="background: linear-gradient(135deg, hsl(217 100% 62% / 0.15), transparent 50%)" />
               </div>
               <div class="absolute -bottom-6 left-5 sm:left-8 panel px-6 py-5 backdrop-blur-md" style="background: hsl(222 47% 4% / 0.85)">
@@ -47,15 +47,15 @@ useSeoMeta({
 
           <div class="pt-6 lg:pt-12">
             <YfReveal>
-              <div class="kicker mb-4">{{ t({ zh: '关于tbseo', en: 'ABOUT TBSEO' }) }}</div>
+              <div class="kicker mb-4">{{ t({ zh: '关于jingsh', en: 'ABOUT JINGSH' }) }}</div>
               <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mb-8 leading-tight">
                 {{ t({ zh: '专业SEO × 数字增长引擎', en: 'Professional SEO × Digital Growth Engine' }) }}
               </h2>
             </YfReveal>
             <YfReveal :delay="100">
               <div class="space-y-5 text-sm leading-[1.9] text-slate-400 mb-10">
-                <p>{{ t({ zh: '无锡tbseo网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。公司的SEO技术团队、内容策略团队以及数据分析团队都在互联网营销领域深耕 10 年以上，深谙搜索引擎算法规则与最佳实践。', en: 'Wuxi Tbseo Network Technology Co., Ltd. specializes in SEO and digital marketing services. Our SEO technical team, content strategy team and data analysis team each bring 10+ years of experience in internet marketing, with thorough knowledge of search engine algorithms and best practices.' }) }}</p>
-                <p>{{ t({ zh: '公司秉承「客户至上」的经营理念，坚持以数据驱动增长、用诚信和共赢发展企业。选择tbseo，您将获得专业SEO技术、精准数据分析与贴心售后于一体的高品质服务。', en: 'Adhering to a customer-first philosophy, we grow through data-driven strategies and mutual success. Choosing tbseo means professional SEO technology, precise data analytics and thoughtful after-sales service.' }) }}</p>
+                <p>{{ t({ zh: '无锡jingsh网络科技有限公司是专业从事搜索引擎优化与数字营销服务的科技公司。公司的SEO技术团队、内容策略团队以及数据分析团队都在互联网营销领域深耕 10 年以上，深谙搜索引擎算法规则与最佳实践。', en: 'Wuxi Jingsh Network Technology Co., Ltd. specializes in SEO and digital marketing services. Our SEO technical team, content strategy team and data analysis team each bring 10+ years of experience in internet marketing, with thorough knowledge of search engine algorithms and best practices.' }) }}</p>
+                <p>{{ t({ zh: '公司秉承「客户至上」的经营理念，坚持以数据驱动增长、用诚信和共赢发展企业。选择jingsh，您将获得专业SEO技术、精准数据分析与贴心售后于一体的高品质服务。', en: 'Adhering to a customer-first philosophy, we grow through data-driven strategies and mutual success. Choosing jingsh means professional SEO technology, precise data analytics and thoughtful after-sales service.' }) }}</p>
               </div>
             </YfReveal>
             <YfReveal :delay="180">

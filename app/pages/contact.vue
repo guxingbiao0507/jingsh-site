@@ -96,7 +96,7 @@ async function submitForm() {
             <div v-for="item in [
               { icon: 'i-lucide-map-pin', label: t('contact.address'), value: '无锡市新吴区硕放中通路8号' },
               { icon: 'i-lucide-phone', label: t('contact.phone'), value: '151-6157-3181 / 153-6521-5320' },
-              { icon: 'i-lucide-mail', label: t('contact.email'), value: 'info@tbseo.com' },
+              { icon: 'i-lucide-mail', label: t('contact.email'), value: 'info@jingsh.com' },
               { icon: 'i-lucide-clock', label: t('contact.workingHours'), value: li('周一至周五 8:00-17:00', 'Mon-Fri 8:00-17:00') },
             ]" :key="item.label" class="flex items-start gap-4">
               <div class="p-2.5 rounded-lg shrink-0" style="background: hsl(187 92% 55% / 0.08); border: 1px solid hsl(187 92% 55% / 0.2)">
@@ -116,7 +116,7 @@ async function submitForm() {
               <p><span class="text-slate-500">{{ t('contactExtra.mobile') }}</span> 151-6157-3181 孙 闪</p>
               <p><span class="text-slate-500">{{ t('contactExtra.landline') }}</span> 153-6529-7658</p>
               <p><span class="text-slate-500">{{ t('contactExtra.address') }}</span> 无锡市新吴区硕放中通路8号</p>
-              <p><span class="text-slate-500">{{ t('contactExtra.website') }}</span> tbseo.com</p>
+              <p><span class="text-slate-500">{{ t('contactExtra.website') }}</span> jingsh.com</p>
             </div>
           </div>
         </div>

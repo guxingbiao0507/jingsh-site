@@ -179,15 +179,15 @@ async function main() {
   }
   console.log('=== Cases ===')
   for (const id of CASES) {
-    const url = `${BASE}/tbseo/${id}.html`
-    process.stdout.write(`  tbseo/${id} ... `)
+    const url = `${BASE}/jingsh/${id}.html`
+    process.stdout.write(`  jingsh/${id} ... `)
     const r = await processPage(url, 'case', 'cases')
     if (r) { all.push(r); console.log(`"${r.title}" imgs=${r.imageCount} text=${r.textLength}`) }
   }
   console.log('=== News ===')
   for (const id of NEWS) {
-    const url = `${BASE}/tbseozx/${id}.html`
-    process.stdout.write(`  tbseozx/${id} ... `)
+    const url = `${BASE}/jingshzx/${id}.html`
+    process.stdout.write(`  jingshzx/${id} ... `)
     const r = await processPage(url, 'news', 'news')
     if (r) { all.push(r); console.log(`"${r.title}" imgs=${r.imageCount} text=${r.textLength}`) }
   }

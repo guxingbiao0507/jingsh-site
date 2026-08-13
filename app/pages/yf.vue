@@ -5,10 +5,10 @@ const { t } = useYfLang()
 const { locale } = useI18n()
 
 useSeoMeta({
-  title: () => 'tbseo — ' + (locale.value === 'en' ? 'Professional SEO Solutions' : '专业SEO优化解决方案'),
+  title: () => 'jingsh — ' + (locale.value === 'en' ? 'Professional SEO Solutions' : '专业SEO优化解决方案'),
   description: () => locale.value === 'en'
-    ? 'Wuxi Tbseo Network Technology — 20+ years in SEO, 3000+ projects, data-driven optimization.'
-    : '无锡tbseo网络科技有限公司 — 20年SEO经验，3000+成功案例，数据驱动的专业优化。',
+    ? 'Wuxi Jingsh Network Technology — 20+ years in SEO, 3000+ projects, data-driven optimization.'
+    : '无锡jingsh网络科技有限公司 — 20年SEO经验，3000+成功案例，数据驱动的专业优化。',
   ogImage: '/api/media/uploads/banner/b1.jpg',
   ogType: 'website',
 })
@@ -18,8 +18,8 @@ useHead({
     { type: 'application/ld+json', innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'tbseo',
-      url: 'https://tbseo.com',
+      name: 'jingsh',
+      url: 'https://jingsh.com',
     })},
   ],
 })

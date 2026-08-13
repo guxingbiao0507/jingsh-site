@@ -36,10 +36,10 @@ const siteKeywords = computed(() => site.value?.settings?.siteKeywords || '')
 const ogImage = computed(() => site.value?.settings?.ogImage || '')
 
 const orgNames: Record<string, string> = {
-  cn: '无锡tbseo网络科技有限公司',
-  en: 'Wuxi Tbseo Network Technology Co., Ltd.',
+  cn: '无锡jingsh网络科技有限公司',
+  en: 'Wuxi Jingsh Network Technology Co., Ltd.',
   th: 'บริษัท อู๋ซี ทีบีเอสอีออ เน็ทเวิร์ก เทคโนโลยี จำกัด',
-  my: 'Wuxi Tbseo Network Technology Co., Ltd.',
+  my: 'Wuxi Jingsh Network Technology Co., Ltd.',
 }
 const orgDescs: Record<string, string> = {
   cn: '专业搜索引擎优化与数字营销服务商，致力于为企业提供一站式SEO解决方案，提升品牌在线可见度与转化率。',
@@ -64,9 +64,9 @@ useHead(() => ({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: orgNames[locale.value] || orgNames.cn,
-      alternateName: 'Wuxi Tbseo Network Technology Co., Ltd.',
-      url: 'https://tbseo.com',
-      logo: 'https://tbseo.com/favicon.ico',
+      alternateName: 'Wuxi Jingsh Network Technology Co., Ltd.',
+      url: 'https://jingsh.com',
+      logo: 'https://jingsh.com/favicon.ico',
       description: siteDesc.value || orgDescs[locale.value] || orgDescs.cn,
       address: {
         '@type': 'PostalAddress',
