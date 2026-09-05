@@ -105,7 +105,7 @@ function toggleMobile() {
             alt="Jingsh Law Firm Logo"
             class="h-[60px]"
           />
-          <span class="text-white text-2xl font-bold max-lg:text-3xl">
+          <span class="jingsh-footer-brand">
             {{ li('京师北欧 / JINGSH Nordic', '京师北欧 / JINGSH Nordic') }}
           </span>
         </div>

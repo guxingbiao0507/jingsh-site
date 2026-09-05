@@ -489,6 +489,19 @@ html.dark body {
   margin-top: 20px;
 }
 
+.jingsh-footer-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+  .jingsh-footer-brand {
+    font-size: 1.875rem;
+  }
+}
+
 /* Contact float */
 .contact-float-btn {
   position: fixed;
