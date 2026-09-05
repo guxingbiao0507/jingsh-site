@@ -39,7 +39,7 @@ const GLOBAL_SETTINGS = {
   companyAddress: 'Fredrikinkatu 23 D 4, 00120 Helsinki, Finland',
   companyHours: 'Mon-Fri 9:00-17:00',
   postsPerPage: '9',
-  ogImage: 'https://www.jingsh.fi/assets/themes/jingsh/images/jingshi-top-bg.png',
+  ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
   robotsTxt: '',
   googleVerification: '',
   ...ANALYTICS,

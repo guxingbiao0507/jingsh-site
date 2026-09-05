@@ -34,11 +34,26 @@ const featureIcons = [
   '/assets/themes/jingsh/images/others.png',
 ]
 
+const slideCount = computed(() => heroSlides.value.length)
 const currentSlide = ref(0)
+const isAnimating = ref(false)
 let autoplayTimer: ReturnType<typeof setInterval> | null = null
 
+function resetAutoplay() {
+  if (autoplayTimer) clearInterval(autoplayTimer)
+  if (import.meta.client) {
+    autoplayTimer = setInterval(nextSlide, 5000)
+  }
+}
+
 function goSlide(i: number) {
-  currentSlide.value = (i + heroSlides.value.length) % heroSlides.value.length
+  if (isAnimating.value || slideCount.value === 0) return
+  const next = ((i % slideCount.value) + slideCount.value) % slideCount.value
+  if (next === currentSlide.value) return
+  isAnimating.value = true
+  currentSlide.value = next
+  window.setTimeout(() => { isAnimating.value = false }, 650)
+  resetAutoplay()
 }
 
 function nextSlide() {
@@ -50,7 +65,7 @@ function prevSlide() {
 }
 
 onMounted(() => {
-  autoplayTimer = setInterval(nextSlide, 5000)
+  resetAutoplay()
 })
 
 onBeforeUnmount(() => {
@@ -60,20 +75,24 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <!-- Hero Carousel -->
+    <!-- Hero Carousel (horizontal slide like jingsh.fi Swiper) -->
     <section class="hero-carousel relative text-white overflow-hidden">
       <div
-        v-for="(slide, i) in heroSlides"
-        :key="i"
-        class="hero-slide transition-opacity duration-700"
-        :class="i === currentSlide ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'"
+        class="hero-track"
+        :style="{ transform: `translate3d(-${currentSlide * 100}%, 0, 0)` }"
       >
-        <div class="jingsh-container relative z-10 py-16 md:py-24">
-          <div class="hero-card">
-            <component :is="slide.isH1 ? 'h1' : 'h2'" class="hero-title">
-              {{ slide.title }}
-            </component>
-            <p class="hero-desc">{{ slide.desc }}</p>
+        <div
+          v-for="(slide, i) in heroSlides"
+          :key="i"
+          class="hero-slide"
+        >
+          <div class="jingsh-container relative z-10 py-16 md:py-24">
+            <div class="hero-card">
+              <component :is="slide.isH1 ? 'h1' : 'h2'" class="hero-title">
+                {{ slide.title }}
+              </component>
+              <p class="hero-desc">{{ slide.desc }}</p>
+            </div>
           </div>
         </div>
       </div>

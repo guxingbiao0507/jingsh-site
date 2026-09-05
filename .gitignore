@@ -28,8 +28,12 @@ logs
 # Wrangler
 .wrangler
 
-public
+# Static assets — ignore public/ except jingsh theme images
+public/*
 !public/assets/
+public/assets/*
 !public/assets/themes/
+public/assets/themes/*
 !public/assets/themes/jingsh/
+public/assets/themes/jingsh/*
 !public/assets/themes/jingsh/**

@@ -45,9 +45,20 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Jingsh Law Firm — professional legal services in corporate, IP, dispute resolution, capital markets and more. 9,000+ lawyers across 50+ countries.' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/assets/themes/jingsh/images/logo.png' },
+        { rel: 'icon', type: 'image/png', href: '/assets/themes/jingsh/images/logo.png', key: 'favicon' },
+        { rel: 'shortcut icon', type: 'image/png', href: '/assets/themes/jingsh/images/logo.png', key: 'shortcut-icon' },
+        { rel: 'apple-touch-icon', href: '/assets/themes/jingsh/images/logo.png', key: 'apple-touch-icon' },
         { rel: 'alternate', type: 'application/json', title: 'jingsh — JSON Feed', href: '/api/public/feed.json' },
         { rel: 'alternate', type: 'application/rss+xml', title: 'jingsh — RSS Feed', href: '/api/public/feed.xml' },
+      ],
+      script: [
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-T7LDC2SCF5', async: true },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T7LDC2SCF5');`,
+        },
       ],
     },
   },
@@ -55,6 +66,8 @@ export default defineNuxtConfig({
   routeRules: {
     '/us': { redirect: { to: '/en', statusCode: 301 } },
     '/us/**': { redirect: { to: '/en/**', statusCode: 301 } },
+    '/favicon.ico': { redirect: { to: '/assets/themes/jingsh/images/logo.png', statusCode: 301 } },
+    '/favicon.svg': { redirect: { to: '/assets/themes/jingsh/images/logo.png', statusCode: 301 } },
     '/**': {
       headers: {
         'Content-Security-Policy': [

@@ -51,9 +51,16 @@ const orgDescs: Record<string, string> = {
   my: 'Leading global full-service law firm',
 }
 
+const favicon = '/assets/themes/jingsh/images/logo.png'
+
 useHead(() => ({
   htmlAttrs: { lang: htmlLang.value },
   title: siteTitle.value,
+  link: [
+    { rel: 'icon', type: 'image/png', href: favicon, key: 'favicon' },
+    { rel: 'shortcut icon', type: 'image/png', href: favicon, key: 'shortcut-icon' },
+    { rel: 'apple-touch-icon', href: favicon, key: 'apple-touch-icon' },
+  ],
   meta: [
     ...(siteDesc.value ? [{ name: 'description', content: siteDesc.value }] : []),
     ...(siteKeywords.value ? [{ name: 'keywords', content: siteKeywords.value }] : []),

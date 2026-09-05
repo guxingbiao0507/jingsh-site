@@ -1,14 +1,29 @@
-// Upload scraped content images to R2 with the CORRECT single-prefix key.
-// Files live at .data/uploads/uploads/uploads/<202212|202507|template>/...
-// Content markdown references /api/media/uploads/<...> → key "uploads/<...>"
-// So root must be .data/uploads/uploads/uploads and key = "uploads/" + rel.
-import { readFileSync, readdirSync, statSync } from 'node:fs'
-import { join, relative } from 'node:path'
+// Upload CMS content images from .data/uploads to R2.
+// Keys match /api/media/{key} — e.g. uploads/202212/foo.jpg
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs'
+import { join, relative, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const CF_TOKEN = readFileSync(join(process.cwd(), '.cloudflare.env'), 'utf8').match(/CLOUDFLARE_API_TOKEN=(\S+)/)[1]
-const ACCOUNT = readFileSync(join(process.cwd(), '.cloudflare.env'), 'utf8').match(/CLOUDFLARE_ACCOUNT_ID=(\S+)/)[1]
-const BUCKET = 'jingsh'
-const ROOT = join(process.cwd(), '.data', 'uploads', 'uploads', 'uploads')
+const root = join(dirname(fileURLToPath(import.meta.url)), '..')
+
+function loadEnv(path) {
+  const env = {}
+  if (!existsSync(path)) return env
+  for (const line of readFileSync(path, 'utf8').split(/\r?\n/)) {
+    const trimmed = line.trim()
+    if (!trimmed || trimmed.startsWith('#')) continue
+    const idx = trimmed.indexOf('=')
+    if (idx > -1) env[trimmed.slice(0, idx).trim()] = trimmed.slice(idx + 1).trim()
+  }
+  return env
+}
+
+const cf = loadEnv(join(root, '.cloudflare.env'))
+const dotenv = loadEnv(join(root, '.env'))
+const CF_TOKEN = cf.CLOUDFLARE_API_TOKEN || dotenv.NUXT_CF_API_TOKEN
+const ACCOUNT = cf.CLOUDFLARE_ACCOUNT_ID || dotenv.NUXT_CF_ACCOUNT_ID
+const BUCKET = cf.CF_R2_BUCKET || dotenv.NUXT_CF_R2_BUCKET || 'jingshi'
+const ROOT = join(root, '.data', 'uploads')
 const BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/r2/buckets/${BUCKET}/objects`
 
 const ct = (f) => ({ jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', gif: 'image/gif', webp: 'image/webp' }[f.split('.').pop().toLowerCase()] || 'application/octet-stream')
@@ -44,10 +59,14 @@ async function put(key, path, retries = 3) {
 }
 
 async function main() {
+  if (!existsSync(ROOT)) {
+    console.log('No .data/uploads directory — nothing to upload')
+    return
+  }
   const files = []
   for (const f of walk(ROOT)) {
     const rel = relative(ROOT, f).replace(/\\/g, '/')
-    files.push({ key: `uploads/${rel}`, path: f })
+    files.push({ key: rel, path: f })
   }
   console.log(`Uploading ${files.length} content images with single-prefix keys (uploads/<...>)`)
   console.log(`Sample key: ${files[0]?.key}`)
