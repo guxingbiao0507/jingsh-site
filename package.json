@@ -11,7 +11,8 @@
     "postinstall": "nuxt prepare",
     "fetch:assets": "node scripts/fetch-jingsh-assets.mjs",
     "seed:news": "node scripts/seed-jingsh-news.mjs",
-    "seed:site": "node scripts/seed-jingsh-site.mjs"
+    "seed:site": "node scripts/seed-jingsh-site.mjs",
+    "seed:cloudflare": "node scripts/seed-cloudflare.mjs"
   },
   "dependencies": {
     "@libsql/client": "^0.17.4",
