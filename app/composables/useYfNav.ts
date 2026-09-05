@@ -1,34 +1,23 @@
-import type { AppRoute } from '~/composables/yf-content'
-
-export function useYfNav() {
-  const { locale } = useI18n()
+export const useYfNav = () => {
   const localePath = useLocalePath()
 
-  const go = (r: AppRoute) => {
-    switch (r.page) {
-      case 'home':
-        navigateTo(localePath('/'))
-        break
-      case 'product':
-        navigateTo(localePath(`/products/${r.slug}`))
-        break
-      case 'article':
-        navigateTo(localePath(`/blog/${r.id}`))
-        break
-      case 'case':
-        navigateTo(localePath(`/cases/${r.slug}`))
-        break
-      case 'about':
-        navigateTo(localePath('/about'))
-        break
-      case 'contact':
-        navigateTo(localePath('/contact'))
-        break
+  function go(route: { page: string }) {
+    const map: Record<string, string> = {
+      home: '/',
+      news: '/news',
+      about: '/#about',
+      contact: '/#contact',
+    }
+    const path = map[route.page]
+    if (path) {
+      navigateTo(localePath(path))
     }
   }
 
-  const goHomeSection = (id: string) => {
-    navigateTo(localePath('/') + '#' + id)
+  function goHomeSection(id: string) {
+    if (import.meta.client) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return { go, goHomeSection }

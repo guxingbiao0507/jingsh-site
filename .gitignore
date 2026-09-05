@@ -29,3 +29,7 @@ logs
 .wrangler
 
 public
+!public/assets/
+!public/assets/themes/
+!public/assets/themes/jingsh/
+!public/assets/themes/jingsh/**

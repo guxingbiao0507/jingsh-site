@@ -1,38 +1,21 @@
-import type { Lang, Bi } from '~/composables/yf-content'
-
-export function useYfLang() {
+export const useYfLang = () => {
   const { locale } = useI18n()
 
-  // Map design-system zh/en to i18n cn/en
-  const lang = computed<Lang>({
-    get: () => locale.value === 'en' ? 'en' : 'zh',
-    set: (l) => {
-      locale.value = l === 'en' ? 'en' : 'cn'
-    },
-  })
+  const lang = computed(() => (locale.value === 'en' ? 'en' : 'zh'))
 
-  const setLang = (l: Lang) => {
-    locale.value = l === 'en' ? 'en' : 'cn'
-    if (import.meta.client) {
-      try { localStorage.setItem('yf-lang', l) } catch {}
-      document.documentElement.lang = l === 'en' ? 'en' : 'zh-CN'
-    }
+  const t = (content: string | { zh: string; en: string }) => {
+    if (typeof content === 'string') return content
+    return lang.value === 'en' ? content.en : content.zh
   }
 
-  const t = (b: Bi) => b[lang.value]
-
-  // Restore saved preference on client
-  if (import.meta.client) {
-    onMounted(() => {
-      try {
-        const saved = localStorage.getItem('yf-lang') as Lang | null
-        if (saved === 'en') {
-          locale.value = 'en'
-        }
-        document.documentElement.lang = locale.value === 'en' ? 'en' : 'zh-CN'
-      } catch {}
-    })
+  function li(zh: string, en: string) {
+    return lang.value === 'en' ? en : zh
   }
 
-  return { lang, setLang, t }
+  function setLang(l: 'zh' | 'en') {
+    locale.value = l
+    localStorage.setItem('jingsh-locale', l)
+  }
+
+  return { t, lang, li, setLang }
 }

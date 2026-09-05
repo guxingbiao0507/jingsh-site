@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jingsh-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nuxt", "dev"],
+      "autoPort": true
+    }
+  ]
+}

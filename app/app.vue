@@ -4,13 +4,13 @@ const route = useRoute()
 const { data: site } = await useSite()
 
 onMounted(() => {
-  const savedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('tb-locale') : null
+  const savedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('jingsh-locale') : null
   const currentPath = route.path
   const pathLocale = currentPath.match(/^\/([a-z]{2})\//)?.[1]
 
   if (pathLocale) {
     locale.value = pathLocale
-    localStorage?.setItem('tb-locale', pathLocale)
+    localStorage?.setItem('jingsh-locale', pathLocale)
   } else if (savedLocale) {
     setLocale(savedLocale)
   }
@@ -20,7 +20,7 @@ watch(() => route.path, (newPath) => {
   const pathLocale = newPath.match(/^\/([a-z]{2})\//)?.[1]
   if (pathLocale && pathLocale !== locale.value) {
     setLocale(pathLocale)
-    localStorage?.setItem('tb-locale', pathLocale)
+    localStorage?.setItem('jingsh-locale', pathLocale)
   }
 })
 
@@ -30,22 +30,25 @@ const htmlLang = computed(() => {
   return l?.language || locale.value
 })
 
-const siteTitle = computed(() => site.value?.settings?.siteTitle || site.value?.settings?.siteName || 'NuxtCMS')
+const siteTitle = computed(() => site.value?.settings?.siteTitle || site.value?.settings?.siteName || 'Jingsh Law Firm')
 const siteDesc = computed(() => site.value?.settings?.siteDescription || '')
 const siteKeywords = computed(() => site.value?.settings?.siteKeywords || '')
-const ogImage = computed(() => site.value?.settings?.ogImage || '')
+const ogImage = computed(() => site.value?.settings?.ogImage || '/assets/themes/jingsh/images/jingshi-top-bg.png')
+const googleVerification = computed(() => site.value?.settings?.googleVerification || '')
+const config = useRuntimeConfig()
+const siteUrl = computed(() => config.public.siteUrl || 'https://www.jingsh.fi')
 
 const orgNames: Record<string, string> = {
-  cn: '无锡jingsh网络科技有限公司',
-  en: 'Wuxi Jingsh Network Technology Co., Ltd.',
-  th: 'บริษัท อู๋ซี ทีบีเอสอีออ เน็ทเวิร์ก เทคโนโลยี จำกัด',
-  my: 'Wuxi Jingsh Network Technology Co., Ltd.',
+  cn: '京师律师事务所',
+  en: 'Jingsh Law Firm',
+  th: 'Jingsh Law Firm',
+  my: 'Jingsh Law Firm',
 }
 const orgDescs: Record<string, string> = {
-  cn: '专业搜索引擎优化与数字营销服务商，致力于为企业提供一站式SEO解决方案，提升品牌在线可见度与转化率。',
-  en: 'Professional SEO optimization and digital marketing agency, dedicated to providing one-stop SEO solutions to enhance brand visibility and conversion rates.',
-  th: 'ผู้เชี่ยวชาญด้าน SEO และการตลาดดิจิทัล มุ่งมั่นให้บริการโซลูชัน SEO ครบวงจร เพื่อเพิ่มความน่าจดจำของแบรนด์',
-  my: 'ပညာရှာ SEO အမြဲတမ်းနှင့် ဒီဂျစ်တယ် ဈာင်မှုဆိုင်ရာ အကူအညီပေးသူ',
+  cn: '全球领先的综合性律师事务所，为客户提供全方位法律服务。',
+  en: 'A leading global full-service law firm providing comprehensive legal solutions worldwide.',
+  th: 'Leading global full-service law firm',
+  my: 'Leading global full-service law firm',
 }
 
 useHead(() => ({
@@ -57,28 +60,31 @@ useHead(() => ({
     ...(ogImage.value ? [{ property: 'og:image', content: ogImage.value }] : []),
     { property: 'og:title', content: siteTitle.value },
     ...(siteDesc.value ? [{ property: 'og:description', content: siteDesc.value }] : []),
+    { property: 'og:site_name', content: site.value?.settings?.siteName || 'Jingsh Law Firm' },
+    { property: 'og:url', content: siteUrl.value },
+    ...(googleVerification.value ? [{ name: 'google-site-verification', content: googleVerification.value }] : []),
   ],
   script: [{
     type: 'application/ld+json',
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: orgNames[locale.value] || orgNames.cn,
-      alternateName: 'Wuxi Jingsh Network Technology Co., Ltd.',
-      url: 'https://jingsh.com',
-      logo: 'https://jingsh.com/favicon.ico',
-      description: siteDesc.value || orgDescs[locale.value] || orgDescs.cn,
+      name: orgNames[locale.value] || orgNames.en,
+      alternateName: '京师律师事务所',
+      url: siteUrl.value,
+      logo: `${siteUrl.value}/assets/themes/jingsh/images/logo.png`,
+      description: siteDesc.value || orgDescs[locale.value] || orgDescs.en,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '硕放中通路8号',
-        addressLocality: '无锡市',
-        addressRegion: '江苏省',
-        postalCode: '214142',
-        addressCountry: 'CN',
+        streetAddress: 'Fredrikinkatu 23 D 4',
+        addressLocality: 'Helsinki',
+        addressRegion: 'Uusimaa',
+        postalCode: '00120',
+        addressCountry: 'FI',
       },
       contactPoint: [
-        { '@type': 'ContactPoint', telephone: '+86-151-6157-3181', contactType: 'sales' },
-        { '@type': 'ContactPoint', telephone: '+86-153-6521-5320', contactType: 'customer service' },
+        { '@type': 'ContactPoint', telephone: '+358-demi.wei@jingsh.fi', contactType: 'Finland Office' },
+        { '@type': 'ContactPoint', telephone: '+45-demi.wei@jingsh.fi', contactType: 'Denmark Office' },
       ],
       sameAs: [],
     }),

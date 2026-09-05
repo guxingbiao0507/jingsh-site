@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jingsh Law Firm    </title>
+    <meta name="keywords" content="jingsh,legal service，accounting service,awyer，Finland，Europe Chinese speaking legal and accounting service in Finland and europe,Company registration and accounting services in Finland and europe,Chinese lawyer in Finland and europe" />
+    <meta name="description" content="jingsh,legal service，accounting service,awyer，Finland，Europe Chinese speaking legal and accounting service in Finland and europe,Company registration and accounting services in Finland and europe,Chinese lawyer in Finland and europe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="/assets/themes/jingsh/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/addons/cms/css/base.css">
+    <link rel="stylesheet" href="/assets/addons/cms/css/style.css">
+    <!-- <link rel="stylesheet" href="/assets/themes/jingsh/css/tailwindoutput.css"> -->
+    <!-- import Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="stylesheet" href="/assets/themes/jingsh/css/jingshi.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af', // 专业蓝色主色调
+                        secondary: '#3b82f6', // 辅助蓝色
+                        accent: '#f59e0b', // 强调色
+                        neutral: '#1f2937', // 中性色
+                        'neutral-light': '#f3f4f6' // 浅中性色
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7LDC2SCF5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T7LDC2SCF5');
+    </script>
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s16fx7yyr5");
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+      .nav-link {
+    
+        @apply text-white hover:text-primary;
+        @apply relative px-3 py-2 text-white hover:text-white transition-colors;
+      }
+      .nav-link::after {
+        @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300;
+      }
+      .nav-link:hover::after {
+        @apply w-full;
+      }
+    }
+    .header_js{
+        background-color: #EB9624;
+        color: white
+    };
+    
+  </style>
+  <style>
+    .nav-link{
+        font-size: 16px;
+    }
+    .lang-switch a{
+        color: #fff;
+        font-weight: 600;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+    }
+    .lang-switch a:hover{
+        opacity: 1;
+    }
+    .lang-switch .lang-current{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    #mobile-menu.active{
+        display: block;
+    }
+  </style>
+    <script src="/assets/addons/cms/js/jquery.min.js"></script>
+    <script src="/assets/addons/cms/js/jquery.SuperSlide.2.1.3.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar - Responsive Design -->
+    <header class="@container header_js sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 relative">
+        <div class="container mx-auto px-4 max-lg:h-[60px]">
+            <nav class="flex items-center justify-between h-16 md:h-20 pr-[20px] md:pr-0">
+                <!-- Logo -->
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/assets/themes/jingsh/images/logo.png" alt="Jingsh Law Firm Logo" class="h-[3rem] md:h-[4rem]">
+                    <span class="text-white text-[1.5rem] font-bold max-lg:text-[0.9rem]">京师北欧 / JINGSH Nordic</span>
+                    <!-- <span class="text-neutral-light hidden md:inline">Law Firm</span> -->
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <li class="hover"><a href="/" title="Home" class="nav-link">Home</a></li>
+                                                <li >
+                            <a href="/news-blogs.html" title="News &amp; Blogs"  class="nav-link">News &amp; Blogs</a>
+                            <!--判断是否有子栏目-->
+                                                    </li>
+                                                
+                </div>
+                <div class="lang-switch hidden lg:flex items-center text-white mr-4">
+                    <a href="/" class="lang-current" title="English Version">EN</a>
+                    <span class="px-2">/</span>
+                    <a href="/zh.html" title="中文版本">中文</a>
+                </div>
+                <div class="topbtn fr">
+            		<div class="search-box fr">
+            			<span class="butn hov"><i></i></span>
+						<div class="share-sub" style="width: 0px;">
+						    <form name="formsearch" action="/search.html">
+						        <input class="fl tex" type="text" name="keyword" value="keywords" onfocus="if(this.value==defaultValue)this.value=''" onblur="if(this.value=='')this.value=defaultValue">
+						        <input type="submit" value="" class="fr sub-btn ico">
+						    </form>
+						</div>
+            		</div>
+            	</div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="flex lg:hidden text-white focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t absolute top-[80px] max-lg:top-[60px] left-0 w-full">
+            <div class="container mx-auto px-4 py-3 space-y-2">
+                <div class="py-2 border-b border-gray-200 mb-2 text-sm font-semibold">
+                    <a href="/" class="text-primary">EN</a>
+                    <span class="px-2 text-gray-500">/</span>
+                    <a href="/zh.html" class="text-neutral">中文</a>
+                </div>
+                <li class="hover"><a href="/" title="Home" class="block py-2 text-neutral hover:text-primary transition-colors">Home</a></li>
+                                                <li >
+                            <a href="/en.html" title="EN"  class="block py-2 text-neutral hover:text-primary transition-colors">EN</a>
+                            <!--判断是否有子栏目-->
+                                                    </li>
+                                                <li >
+                            <a href="/zh.html" title="中文"  class="block py-2 text-neutral hover:text-primary transition-colors">中文</a>
+                            <!--判断是否有子栏目-->
+                                                    </li>
+                                                
+            </div>
+        </div>
+        
+        <script>
+            $("#menu-toggle").click(function(){
+                $("#mobile-menu").toggleClass('active');
+            })
+        </script>
+    </header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    .hero-swiper {
+      --swiper-navigation-color: #ffffff;
+      --swiper-navigation-size: 34px;
+      --swiper-pagination-color: #ffffff;
+      --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.6);
+      --swiper-pagination-bullet-inactive-opacity: 1;
+    }
+    .hero-swiper .swiper-button-next,
+    .hero-swiper .swiper-button-prev {
+      top: 50%;
+      width: 46px;
+      height: 46px;
+      margin-top: -23px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(3px);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 20;
+    }
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    /* 箭头紧贴内容区图片边缘 */
+    .hero-swiper .swiper-button-prev {
+      left: 5vw;
+      z-index: 21;
+      /* 让箭头在图片内侧边缘 */
+      transform: translateY(-50%) translateX(-30%);
+    }
+    .hero-swiper .swiper-button-next {
+      right: 5vw;
+      left: auto;
+      z-index: 21;
+      transform: translateY(-50%) translateX(30%);
+    }
+    /* 只让箭头在内容区图片内侧，不会覆盖内容 */
+    .hero-swiper .swiper-slide > .container {
+      position: relative;
+    }
+    @media (max-width: 900px) {
+      .hero-swiper .swiper-button-prev {
+        left: 2px;
+        transform: translateY(-50%) translateX(0);
+      }
+      .hero-swiper .swiper-button-next {
+        right: 2px;
+        left: auto;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+    .hero-swiper:hover .swiper-button-next,
+    .hero-swiper:hover .swiper-button-prev {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .hero-swiper .swiper-button-next::after,
+    .hero-swiper .swiper-button-prev::after {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .hero-swiper .swiper-pagination {
+      bottom: 16px !important;
+      z-index: 20;
+    }
+    .hero-swiper .swiper-pagination-bullet {
+      cursor: pointer;
+    }
+    @media (max-width: 1024px) {
+      .hero-swiper .swiper-button-next,
+      .hero-swiper .swiper-button-prev {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  </style>
+   <!-- 描述 -->
+  <section class="relative from-primary to-secondary text-white overflow-hidden">
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container mx-auto px-4 relative z-10 py-16 md:py-24" style="background-image: url('/assets/themes/jingsh/images/jingshi-top-bg.png');background-size: 100% 100%;">
+            <div class="max-w-3xl p-[2.5rem] bg-[rgba(255,255,255,0.4)] rounded-xl max-lg:p-[1.5rem]">
+              <h1 class="text-[2.5rem] font-bold leading-tight text-shadow mb-6 max-lg:text-[1.5rem]">
+                We know the law, and we're on your side
+              </h1>
+              <p class="text-[1.2rem] mb-8 opacity-90 max-lg:text-[1rem]">
+                Founded in 1994, after more than 20 years of steady operation and standardized development,
+                the influence of Jingsh Law firm has radiated to the global scope.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container mx-auto px-4 relative z-10 py-16 md:py-24" style="background-image: url('/assets/themes/jingsh/images/jingshi-top-bg.png');background-size: 100% 100%;">
+            <div class="max-w-3xl p-[2.5rem] bg-[rgba(255,255,255,0.4)] rounded-xl max-lg:p-[1.5rem]">
+              <h2 class="text-[2.5rem] font-bold leading-tight text-shadow mb-6 max-lg:text-[1.5rem]">
+                International Legal Services Across Nordic and Europe
+              </h2>
+              <p class="text-[1.2rem] mb-8 opacity-90 max-lg:text-[1rem]">
+                We support enterprises and individuals with practical legal, tax, and compliance solutions
+                tailored to cross-border business scenarios.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container mx-auto px-4 relative z-10 py-16 md:py-24" style="background-image: url('/assets/themes/jingsh/images/jingshi-top-bg.png');background-size: 100% 100%;">
+            <div class="max-w-3xl p-[2.5rem] bg-[rgba(255,255,255,0.4)] rounded-xl max-lg:p-[1.5rem]">
+              <h2 class="text-[2.5rem] font-bold leading-tight text-shadow mb-6 max-lg:text-[1.5rem]">
+                One-Stop Support for Investment and Localization
+              </h2>
+              <p class="text-[1.2rem] mb-8 opacity-90 max-lg:text-[1rem]">
+                From company setup to dispute resolution, JINGSH Nordic provides efficient support
+                for your long-term development in local markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="bg-white py-16 md:py-12">
+    <div class="container mx-auto max-lg:px-[20px]">
+      <p class="mx-auto text-[#EB9624] text-[30px] mb-[16px] font-bold w-fit">About Us</p>
+      <div class="mx-auto mb-6">
+        <p class=" text-[1rem]"><span class="font-bold text-[#EB9624] text-[1rem]">Jingsh Law Firm</span>
+       was established in 1994 and has grown into one of the leading full-service law firms in China. The firm operates nearly 100 offices across approximately 50 countries and regions, covering major cities both in China and internationally. 
+      </p><p class="">Jingsh has a team of over 9,000 lawyers. Many of its professionals hold advanced degrees in law and additional qualifications such as Certified Public Accountant (CPA), tax advisor, and patent agent credentials.
+      </p><p class="">The firm provides comprehensive legal services across a wide range of practice areas, including corporate and commercial law, capital markets, financial services, intellectual property, construction and infrastructure, labor and employment, dispute resolution, and regulatory compliance.</p>
+      <p>Leveraging its global network and multidisciplinary expertise, Jingsh is committed to delivering efficient, practical, and high-quality legal solutions to clients worldwide.</p>
+      </div>
+      <p class="mx-auto text-[1rem]">
+        <span class="font-bold text-[#EB9624] text-[1rem]">Nordic Presence</span>
+      </p>
+      <div class="mx-auto text-[1rem]">
+        <p>Jingsh operates in the Nordic region through two local entities, providing integrated legal and business execution services:</p>
+        <p>🇫🇮 <span class="font-bold">Jingsh Finland</span></p>
+        <p>JINGSH Finance & Legal Nordic Oy<br>
+        (Helsinki, Finland | Established in 2024)<br>
+        Focused on market entry and business operations in Finland and the Nordics</p>
+        <hr class="my-4">
+        <p>🇩🇰 <span class="font-bold">Jingsh Denmark</span></p>
+        <p>JINGSH Finance & Legal Denmark ApS<br>
+        (Copenhagen, Denmark | Established in 2025)<br>
+        Supporting Nordic and EU cross-border structuring and operations</p>
+        <hr class="my-4">
+        <p><span class="font-bold">Capabilities in the Nordics</span></p>
+        <p>Through its Nordic offices, Jingsh provides one-stop solutions for companies entering and operating in Europe and the Nordic region, including:</p>
+        <ul class="indent-0 [&>li]:list-disc [&>li]:list-inside [&>li]:marker:text-black">
+          <li>Market entry strategy and structuring</li>
+          <li>Company incorporation and corporate governance</li>
+          <li>Tax and VAT compliance (including EU frameworks)</li>
+          <li>Cross-border employment and project execution</li>
+          <li>Mergers & acquisitions and commercial transactions</li>
+          <li>Dispute resolution and regulatory advisory</li>
+          <li>Local operational support and ongoing compliance</li>
+        </ul>
+        <p>By combining legal expertise with practical business execution, Jingsh supports clients throughout the entire lifecycle — from market entry to long-term operations.</p>
+      </div>
+    </div>
+  </section>
+<!-- 服务 -->
+  <section id="services" class="bg-[rgb(248,248,248)] py-16 md:py-12">
+    <div class="container mx-auto px-4">
+      <div class="bg-white w-full px-[100px] py-[50px] flex flex-col items-center gap-y-[20px] rounded-[16px] shadow-lg max-lg:px-[20px]">
+        <img src="/assets/themes/jingsh/images/legal.png" class="w-[50px] h-[50px]" alt=""/>
+        <p class="w-fit text-[rgb(33,33,33)] font-bold text-[1.5rem]">Market Entry & Company Setup</p>
+        <p class="text-center text-[rgb(82,100,124)] text-[1rem] leading-relaxed">
+          • Company incorporation in Finland & Denmark<br>
+          • Subsidiary vs branch structuring<br>
+          • Corporate governance<br>
+          • Bank account support<br>
+          End-to-end setup for entering the Nordic market
+        </p>
+      </div>
+      <div class="flex flex-row gap-[20px] w-full mt-[20px] max-lg:flex-col">
+        <div class="bg-white flex-1 px-[20px] py-[50px] flex flex-col items-center gap-y-[20px] rounded-[16px] shadow-md">
+          <img src="/assets/themes/jingsh/images/accounting.png" class="w-[50px] h-[50px]" alt=""/>
+          <p class="w-fit text-[rgb(33,33,33)] font-bold text-[1.5rem]">Tax, Accounting & Compliance</p>
+          <p class="text-center text-[rgb(82,100,124)] text-[1rem] leading-relaxed">
+            • VAT & EORI registration<br>
+            • Tax structuring (EU compliant)<br>
+            • Accounting & payroll<br>
+            • Ongoing compliance<br>
+            Stay compliant and operate smoothly in Europe
+          </p>
+        </div>
+        <div class="bg-white flex-1 px-[20px] py-[50px] flex flex-col items-center gap-y-[20px] rounded-[16px] shadow-md">
+          <img src="/assets/themes/jingsh/images/others.png" class="w-[50px] h-[50px]" alt=""/>
+          <p class="w-fit text-[rgb(33,33,33)] font-bold text-[1.5rem]">Employment & Business Operations</p>
+          <p class="text-center text-[rgb(82,100,124)] text-[1rem] leading-relaxed">
+            • Cross-border employment / secondment<br>
+            • Local hiring solutions<br>
+            • Project execution support<br>
+            • Operational advisory<br>
+            Support your real business operations on the ground
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新新闻 -->
+  <section id="news" class="py-16 md:py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <h2 class="text-[30px] font-bold text-[rbg(33,33,33)] mb-4"><a href="" class="">Latest News</a></h2>
+      </div>
+      <div class="w-full grid grid-cols-3 gap-x-[24px] gap-y-[24px] max-lg:grid-cols-1 max-lg:px-[10px]">
+                    <div class="rounded-[20px] w-full h-[270px] border-solid border border-[rgb(235,150,36)] flex flex-col gap-y-[15px] p-[20px]">
+              
+              <a href="/news-blogs/4.html"><p class="truncate text-[rgb(34,32,29)] text-[1.1rem] max-lg:text-[1.5rem]">Jingsh Lawyer Received Invitation for the fifth BIFP in Russia</p></a>
+              <a href="/news-blogs/4.html" class="flex-1"><p class="line-clamp-7 text-[0.875rem] text-[rbg(34,32,29)] max-lg:text-[1rem]">From 27 to 29 May 2024, the fifth Baikal International Forum of Partners (shortened as BIFP) was held in Irkutsk, Russia. Jingsh Lawyer Wen Guobiao, the Director of the China-Russia Commercial Service </p></a>
+              <a href="/news-blogs/4.html" class="!text-[#EB9624] text-[1rem]">Learn more</a>
+            </div>
+                        <div class="rounded-[20px] w-full h-[270px] border-solid border border-[rgb(235,150,36)] flex flex-col gap-y-[15px] p-[20px]">
+              
+              <a href="/news-blogs/3.html"><p class="truncate text-[rgb(34,32,29)] text-[1.1rem] max-lg:text-[1.5rem]">Jingsh Korea Incorporated Officially Established in Seoul, Korea</p></a>
+              <a href="/news-blogs/3.html" class="flex-1"><p class="line-clamp-7 text-[0.875rem] text-[rbg(34,32,29)] max-lg:text-[1rem]">On April 18, 2024, the Seoul Central District Court approved and issued the registration certificate for Jingsh Korea (Registration No.: 110111-8920088). On May 24, 2024, the Korean National Tax Servi</p></a>
+              <a href="/news-blogs/3.html" class="!text-[#EB9624] text-[1rem]">Learn more</a>
+            </div>
+                        <div class="rounded-[20px] w-full h-[270px] border-solid border border-[rgb(235,150,36)] flex flex-col gap-y-[15px] p-[20px]">
+              
+              <a href="/news-blogs/2.html"><p class="truncate text-[rgb(34,32,29)] text-[1.1rem] max-lg:text-[1.5rem]">Governor of Irkutsk Oblast Igor Kobzev Received Jingsh Lawyers</p></a>
+              <a href="/news-blogs/2.html" class="flex-1"><p class="line-clamp-7 text-[0.875rem] text-[rbg(34,32,29)] max-lg:text-[1rem]">On the afternoon of May 29th, Igor Ivanovich Kobzev, the Governor of Irkutsk Oblast, Russia, warmly received a delegation led by Wen Guobiao, the Director of the China-Russia Legal and Commercial Serv</p></a>
+              <a href="/news-blogs/2.html" class="!text-[#EB9624] text-[1rem]">Learn more</a>
+            </div>
+                        
+         
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (function () {
+      var heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        speed: 650,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.hero-swiper .swiper-button-next',
+          prevEl: '.hero-swiper .swiper-button-prev',
+        },
+        pagination: {
+          el: '.hero-swiper .swiper-pagination',
+          clickable: true,
+        },
+        grabCursor: true,
+      });
+    })();
+  </script>
+  <!-- Contact Float Button -->
+<style>
+.contact-float-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #EB9624;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(235, 150, 36, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 12px;
+    gap: 2px;
+}
+.contact-float-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(235, 150, 36, 0.55);
+}
+.contact-float-btn i {
+    font-size: 20px;
+}
+@media (max-width: 768px) {
+    .contact-float-btn {
+        width: 52px;
+        height: 52px;
+        right: 12px;
+        bottom: 80px;
+        font-size: 10px;
+    }
+    .contact-float-btn i {
+        font-size: 16px;
+    }
+}
+.contact-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.contact-modal-overlay.active {
+    display: flex;
+}
+.contact-modal-box {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow: visible;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: contactModalIn 0.3s ease;
+}
+@keyframes contactModalIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.contact-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+.contact-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+}
+.contact-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #f3f4f6;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.contact-modal-close:hover {
+    background: #e5e7eb;
+    color: #222;
+}
+.contact-modal-body {
+    width: 100%;
+    min-height: 200px;
+}
+.contact-modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+@media (max-width: 768px) {
+    .contact-modal-overlay {
+        padding: 0;
+    }
+    .contact-modal-box {
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        height: 100vh;
+    }
+    .contact-modal-body {
+        height: calc(100vh - 68px);
+        max-height: none;
+    }
+}
+</style>
+
+<button class="contact-float-btn" onclick="openContactModal()" title="Contact Us">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Contact</span>
+</button>
+
+<div class="contact-modal-overlay" id="contactModal" onclick="closeContactModal(event)">
+    <div class="contact-modal-box" onclick="event.stopPropagation()">
+        <div class="contact-modal-header">
+            <h3>Contact Us</h3>
+            <button class="contact-modal-close" onclick="closeContactModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="contact-modal-body">
+            <iframe src="/addons/formguide/index?id=5&lang=en" id="contactIframe" loading="lazy" scrolling="no"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+function openContactModal() {
+    document.getElementById('contactModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeContactModal(e) {
+    if (e && e.target !== document.getElementById('contactModal')) return;
+    document.getElementById('contactModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+});
+</script>
+
+  <!-- 页脚 -->
+<footer class="@container bg-[rgb(34,32,29)] text-white py-[10px] w-full">
+    <div class="container mx-auto">
+        <div class="flex flex-row items-center">
+            <img src="/assets/themes/jingsh/images/logo.png" alt="Jingsh Law Firm Logo" class="h-[60px]">
+            <span class="text-white text-[1.5rem] font-bold max-lg:text-[2rem]">京师北欧 / JINGSH Nordic</span>
+        </div>
+        <div class="flex justify-between gap-y-4 gap-x-2 max-lg:flex-col">
+            <div class="flex flex-col gap-y-[15px] pl-[50px]">
+                <p class="font-bold text-[1.5rem]">Information</p>
+                <div class="flex flex-row gap-x-[50px] max-lg:flex-col">
+                    <div class="flex flex-col gap-y-[10px]">
+                        <p class="font-bold">京师芬兰 / JINGSH Finland</p>
+                        <p class="text-[14px]">JINGSH Finance & Legal Nordic Oy</p>
+                        <p class="text-[14px]">Email: <a href="mailto:demi.wei@jingsh.fi" class="!text-white">demi.wei@jingsh.fi</a></p>
+                        <p class="text-[14px]">Address: Fredrikinkatu 23 D 4, 00120, Helsinki</p>
+                    </div>
+                    <div class="flex flex-col gap-y-[10px]">
+                        <p class="font-bold">京师丹麦 / JINGSH Denmark</p>
+                        <p class="text-[14px]">JINGSH Finance & Legal Denmark ApS</p>
+                        <p class="text-[14px]">Email: <a href="mailto:demi.wei@jingsh.fi" class="!text-white">demi.wei@jingsh.fi</a></p>
+                        <p class="text-[14px]">Address: Admiralgade 22, 1. tv, 1066 København K</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-y-[15px] max-lg:pl-[40px]">
+                <li class="hover"><a href="/" title="Home" class="nav-link text-[1.5rem]">Home</a></li>
+                                                <li >
+                            <a href="/en.html" title="EN"  class="nav-link text-[1rem]">EN</a>
+                        </li>
+                                                <li >
+                            <a href="/zh.html" title="中文"  class="nav-link text-[1rem]">中文</a>
+                        </li>
+                                                
+            </div>
+        </div>
+        
+    </div>
+    <p class="text-center text-[12px] border-t-[1px] border-[#EB9624] pt-[10px] mt-[20px]">
+        Copyright ©1994-2025 JINGSH LAW FIRM ALL RIGHTS RESERVED.    </p>
+</footer>
+</body>
+<script src="/assets/addons/cms/js/base.js"></script>
+
+</html>
+
+

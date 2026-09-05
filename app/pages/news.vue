@@ -2,52 +2,84 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { data: site } = await useSite()
-function li(zh: string, en: string) { return locale.value === 'en' ? en : zh }
+
+const page = ref(1)
+const pageSize = 9
+
+const { posts, total, pending, formatDate } = useJingshNews({
+  limit: pageSize,
+  offset: computed(() => (page.value - 1) * pageSize),
+  category: 'news',
+})
+
+const totalPages = computed(() => Math.max(1, Math.ceil(total.value / pageSize)))
 
 useSeoMeta({
-  title: () => `${t('news.title')} — ${site.value?.settings.siteName}`,
-  description: () => site.value?.settings.siteDescription,
-  ogImage: '/assets/hero.jpg',
-  twitterCard: 'summary_large_image',
+  title: () => `${t('news.title')} — ${site.value?.settings.siteName || 'Jingsh Law Firm'}`,
+  description: () => t('news.description'),
+  ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
 })
 
-const { data: postsData } = await useFetch('/api/public/posts', {
-  query: { limit: 50, category: 'news', locale },
-  default: () => ({ items: [], total: 0 }),
-  watch: [locale],
-})
-
-const posts = computed(() => postsData.value?.items ?? [])
+function goPage(p: number) {
+  if (p < 1 || p > totalPages.value) return
+  page.value = p
+  if (import.meta.client) window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <template>
   <div>
-    <section class="border-b hairline" style="min-height:260px; border-color: hsl(213 30% 18%); background: hsl(220 40% 7%)">
-      <div class="container-x py-16 text-center">
-        <div class="kicker mb-4">{{ li('一番资讯', 'INSIGHTS') }}</div>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">{{ t('news.title') }}</h1>
-        <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">{{ t('news.subtitle') }}</p>
+    <section class="bg-white py-16 md:py-12 border-b border-gray-100">
+      <div class="jingsh-container px-4 text-center">
+        <h1 class="text-[30px] font-bold text-[rgb(33,33,33)] mb-4">
+          {{ t('news.title') }}
+        </h1>
+        <p class="text-[rgb(82,100,124)]">{{ t('news.subtitle') }}</p>
       </div>
     </section>
 
-    <div class="container-x py-16">
-      <div v-if="posts.length" class="grid md:grid-cols-2 lg:grid-cols-3 gap-px max-w-6xl mx-auto" style="background: hsl(213 30% 18%)">
-        <NuxtLink v-for="(post, i) in posts" :key="post.id" :to="localePath(`/blog/${post.slug}`)" class="group block p-7 flex flex-col justify-between min-h-[180px] transition-colors duration-300" style="background: hsl(222 47% 4%)">
-          <div>
-            <div class="flex items-center justify-between mb-5">
-              <span class="font-mono-tech text-[10px] tracking-[0.25em] text-slate-500">{{ post.publishedAt ? new Date(post.publishedAt).toLocaleDateString(locale.value === 'en' ? 'en-US' : 'zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }) : '' }}</span>
-              <span class="font-mono-tech text-[10px] text-slate-600">/{{ String(i + 1).padStart(2, '0') }}</span>
-            </div>
-            <h3 class="text-[15px] font-semibold leading-relaxed text-slate-200 group-hover:text-white transition-colors">{{ post.title }}</h3>
-          </div>
-          <div class="mt-6 flex items-center gap-2 text-[11px] font-medium tracking-wider transition-colors" style="color: hsl(215 20% 62%)">
-            <span class="group-hover:text-[hsl(187_92%_55%)] transition-colors">{{ li('阅读文章', 'Read Article') }}</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="absolute left-0 top-0 h-full w-[2px] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500" style="background: linear-gradient(to bottom, hsl(187 92% 55%), hsl(217 100% 62%))" />
-        </NuxtLink>
+    <section class="py-16 md:py-12 bg-white">
+      <div class="jingsh-container px-4">
+        <div v-if="pending" class="text-center py-20 text-[rgb(82,100,124)]">
+          {{ t('news.loading') }}
+        </div>
+
+        <div v-else-if="posts.length" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <JingshNewsCard
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title"
+            :excerpt="post.excerpt"
+            :date="formatDate(post.publishedAt)"
+            :href="localePath(`/blog/${post.slug}`)"
+            :learn-more="t('news.learnMore')"
+          />
+        </div>
+
+        <div v-else class="text-center py-20 text-[rgb(82,100,124)]">
+          {{ t('news.empty') }}
+        </div>
+
+        <div v-if="totalPages > 1" class="mt-12 flex items-center justify-center gap-2">
+          <button
+            type="button"
+            class="px-4 py-2 border rounded-lg text-sm disabled:opacity-40 hover:border-[#EB9624]"
+            :disabled="page <= 1"
+            @click="goPage(page - 1)"
+          >
+            {{ t('news.previous') }}
+          </button>
+          <span class="text-sm text-[rgb(82,100,124)] px-3">{{ page }} / {{ totalPages }}</span>
+          <button
+            type="button"
+            class="px-4 py-2 border rounded-lg text-sm disabled:opacity-40 hover:border-[#EB9624]"
+            :disabled="page >= totalPages"
+            @click="goPage(page + 1)"
+          >
+            {{ t('news.next') }}
+          </button>
+        </div>
       </div>
-      <div v-else class="text-center py-20"><p class="text-slate-500">{{ t('news.empty') }}</p></div>
-    </div>
+    </section>
   </div>
 </template>
