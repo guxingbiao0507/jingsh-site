@@ -60,8 +60,8 @@ useHead(() => ({
   title: siteTitle.value,
   // Override nuxtcms/@nuxtjs/seo default (`%s %separator %siteName` → … | NuxtCMS).
   titleTemplate: (titleChunk) => {
-    const name = siteTitle.value
-    return titleChunk ? `${titleChunk} · ${name}` : name
+    if (!titleChunk || titleChunk === SITE_TITLE) return SITE_TITLE
+    return `${titleChunk} · ${SITE_TITLE}`
   },
   link: [
     { rel: 'icon', type: 'image/png', href: favicon, key: 'favicon' },

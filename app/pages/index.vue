@@ -14,7 +14,16 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 const { data: site } = await useSite()
 
+const HOME_TITLE = '京师北欧 / JINGSH Nordic'
+
+useHead({
+  title: HOME_TITLE,
+  titleTemplate: '%s',
+})
+
 useSeoMeta({
+  title: HOME_TITLE,
+  ogTitle: HOME_TITLE,
   description: () => site.value?.settings.siteDescription || t(hero.sub),
   ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
 })
