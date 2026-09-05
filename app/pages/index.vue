@@ -86,7 +86,7 @@ onBeforeUnmount(() => {
           :key="i"
           class="hero-slide"
         >
-          <div class="jingsh-container relative z-10 py-16 md:py-24">
+          <div class="hero-slide-inner jingsh-container relative z-10 py-12 md:py-16">
             <div class="hero-card">
               <component :is="slide.isH1 ? 'h1' : 'h2'" class="hero-title">
                 {{ slide.title }}

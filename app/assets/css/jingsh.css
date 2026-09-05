@@ -103,6 +103,7 @@ html.dark body {
 .hero-carousel {
   position: relative;
   overflow: hidden;
+  background: #fff;
 }
 
 .hero-track {
@@ -115,10 +116,14 @@ html.dark body {
 .hero-slide {
   flex: 0 0 100%;
   width: 100%;
+}
+
+.hero-slide-inner {
   background-image: url('/assets/themes/jingsh/images/jingshi-top-bg.png');
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .hero-card {
