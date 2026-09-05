@@ -1,4 +1,5 @@
 import { createClient } from '@libsql/client'
+import { Hash } from '@adonisjs/hash'
 import { Scrypt } from '@adonisjs/hash/drivers/scrypt'
 import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -20,7 +21,8 @@ const ADMIN_EMAIL = process.env.JINGSH_ADMIN_EMAIL || 'admin@jingsh.fi'
 const ADMIN_PASSWORD = process.argv[2] || process.env.JINGSH_ADMIN_PASSWORD || 'JingshAdmin2026'
 
 const db = createClient({ url: DB_URL })
-const scrypt = new Scrypt()
+/** Same stack as nuxt-auth-utils hashPassword() (Hash + Scrypt with default config). */
+const hash = new Hash(new Scrypt({}))
 
 /** From https://www.jingsh.fi/ (GA4 + Microsoft Clarity). Bing meta not present on legacy site. */
 const ANALYTICS = {
@@ -30,7 +32,7 @@ const ANALYTICS = {
 }
 
 const GLOBAL_SETTINGS = {
-  siteName: 'Jingsh Law Firm',
+  siteName: '京师北欧 / JINGSH Nordic',
   siteDescription: 'Jingsh Law Firm — professional legal services in corporate, IP, dispute resolution, capital markets and more. 9,000+ lawyers across 50+ countries.',
   siteKeywords: 'jingsh, legal service, accounting service, lawyer, Finland, Europe, Chinese speaking legal and accounting service in Finland and europe, company registration',
   footerText: '© Jingsh Law Firm. All rights reserved.',
@@ -47,13 +49,13 @@ const GLOBAL_SETTINGS = {
 
 const LOCALE_SEO = {
   en: {
-    siteTitle: 'Jingsh Law Firm',
+    siteTitle: '京师北欧 / JINGSH Nordic',
     siteDescription: 'Jingsh Law Firm — professional legal services in corporate, IP, dispute resolution, capital markets and more. Nordic and global presence.',
     siteKeywords: GLOBAL_SETTINGS.siteKeywords,
     ogImage: GLOBAL_SETTINGS.ogImage,
   },
   cn: {
-    siteTitle: '京师律师事务所',
+    siteTitle: '京师北欧 / JINGSH Nordic',
     siteDescription: '京师律师事务所 — 公司、知识产权、争议解决、资本市场等专业法律服务。9000+律师，覆盖50+国家，北欧及全球布局。',
     siteKeywords: '京师, 律师事务所, 法律服务, 芬兰, 欧洲, 跨境, 公司注册, 合规',
     ogImage: GLOBAL_SETTINGS.ogImage,
@@ -88,13 +90,13 @@ async function upsertTranslation(locale, key, value) {
 }
 
 async function ensureAdmin() {
-  const hash = await scrypt.make(ADMIN_PASSWORD)
+  const passwordHash = await hash.make(ADMIN_PASSWORD)
   const users = await db.execute(`SELECT id, email FROM cms_users WHERE role = 'admin' LIMIT 1`)
 
   if (users.rows.length) {
     await db.execute(`UPDATE cms_users SET email = ?, password = ? WHERE id = ?`, [
       ADMIN_EMAIL.toLowerCase(),
-      hash,
+      passwordHash,
       users.rows[0].id,
     ])
     console.log(`admin password reset for ${ADMIN_EMAIL}`)
@@ -103,7 +105,7 @@ async function ensureAdmin() {
 
   await db.execute(
     `INSERT INTO cms_users (name, email, password, role) VALUES (?, ?, ?, ?)`,
-    ['Jingsh Admin', ADMIN_EMAIL.toLowerCase(), hash, 'admin'],
+    ['Jingsh Admin', ADMIN_EMAIL.toLowerCase(), passwordHash, 'admin'],
   )
   console.log(`admin created: ${ADMIN_EMAIL}`)
 }

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.jingsh.fi',
-    name: 'Jingsh Law Firm',
+    name: '京师北欧 / JINGSH Nordic',
   },
 
   sitemap: {

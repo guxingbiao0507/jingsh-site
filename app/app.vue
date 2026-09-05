@@ -30,7 +30,9 @@ const htmlLang = computed(() => {
   return l?.language || locale.value
 })
 
-const siteTitle = computed(() => site.value?.settings?.siteTitle || site.value?.settings?.siteName || 'Jingsh Law Firm')
+const SITE_TITLE = '京师北欧 / JINGSH Nordic'
+
+const siteTitle = computed(() => site.value?.settings?.siteTitle || site.value?.settings?.siteName || SITE_TITLE)
 const siteDesc = computed(() => site.value?.settings?.siteDescription || '')
 const siteKeywords = computed(() => site.value?.settings?.siteKeywords || '')
 const ogImage = computed(() => site.value?.settings?.ogImage || '/assets/themes/jingsh/images/jingshi-top-bg.png')
@@ -39,10 +41,10 @@ const config = useRuntimeConfig()
 const siteUrl = computed(() => config.public.siteUrl || 'https://www.jingsh.fi')
 
 const orgNames: Record<string, string> = {
-  cn: '京师律师事务所',
-  en: 'Jingsh Law Firm',
-  th: 'Jingsh Law Firm',
-  my: 'Jingsh Law Firm',
+  cn: '京师北欧 / JINGSH Nordic',
+  en: '京师北欧 / JINGSH Nordic',
+  th: '京师北欧 / JINGSH Nordic',
+  my: '京师北欧 / JINGSH Nordic',
 }
 const orgDescs: Record<string, string> = {
   cn: '全球领先的综合性律师事务所，为客户提供全方位法律服务。',
@@ -67,7 +69,7 @@ useHead(() => ({
     ...(ogImage.value ? [{ property: 'og:image', content: ogImage.value }] : []),
     { property: 'og:title', content: siteTitle.value },
     ...(siteDesc.value ? [{ property: 'og:description', content: siteDesc.value }] : []),
-    { property: 'og:site_name', content: site.value?.settings?.siteName || 'Jingsh Law Firm' },
+    { property: 'og:site_name', content: site.value?.settings?.siteName || SITE_TITLE },
     { property: 'og:url', content: siteUrl.value },
     ...(googleVerification.value ? [{ name: 'google-site-verification', content: googleVerification.value }] : []),
   ],
@@ -77,7 +79,7 @@ useHead(() => ({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: orgNames[locale.value] || orgNames.en,
-      alternateName: '京师律师事务所',
+      alternateName: 'JINGSH Nordic',
       url: siteUrl.value,
       logo: `${siteUrl.value}/assets/themes/jingsh/images/logo.png`,
       description: siteDesc.value || orgDescs[locale.value] || orgDescs.en,

@@ -69,7 +69,7 @@ async function onSubmit() {
               class="admin-login-logo"
             >
           </NuxtLink>
-          <h1 class="admin-login-brand-title">Jingsh Law Firm</h1>
+          <h1 class="admin-login-brand-title">京师北欧 / JINGSH Nordic</h1>
           <p class="admin-login-brand-sub">{{ tagline }}</p>
 
           <ul class="admin-login-features">

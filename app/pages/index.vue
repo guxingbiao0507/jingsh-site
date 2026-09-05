@@ -15,7 +15,7 @@ const localePath = useLocalePath()
 const { data: site } = await useSite()
 
 useSeoMeta({
-  title: () => site.value?.settings.siteName || 'Jingsh Law Firm',
+  title: () => site.value?.settings.siteName || '京师北欧 / JINGSH Nordic',
   description: () => site.value?.settings.siteDescription || t(hero.sub),
   ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
 })

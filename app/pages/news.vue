@@ -15,7 +15,7 @@ const { posts, total, pending, formatDateTime } = useJingshNews({
 const totalPages = computed(() => Math.max(1, Math.ceil(total.value / pageSize)))
 
 useSeoMeta({
-  title: () => `${t('news.title')} — ${site.value?.settings.siteName || 'Jingsh Law Firm'}`,
+  title: () => `${t('news.title')} — ${site.value?.settings.siteName || '京师北欧 / JINGSH Nordic'}`,
   description: () => t('news.description'),
   ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
 })
