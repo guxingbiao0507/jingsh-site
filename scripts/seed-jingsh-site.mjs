@@ -15,7 +15,7 @@ if (existsSync(envFile)) {
   }
 }
 
-const DB_URL = process.env.DATABASE_URL || 'file:.data/tbseo.sqlite'
+const DB_URL = process.env.DATABASE_URL || 'file:.data/jingsh.sqlite'
 const ADMIN_EMAIL = process.env.JINGSH_ADMIN_EMAIL || 'admin@jingsh.fi'
 const ADMIN_PASSWORD = process.argv[2] || process.env.JINGSH_ADMIN_PASSWORD || 'JingshAdmin2026'
 

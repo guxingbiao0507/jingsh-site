@@ -14,9 +14,9 @@ pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "jingsh"
-database_id = "b8bd89ac-2760-43e6-9cb3-7bd5ee5675b0"
-migrations_dir = "server/database/migrations"
+database_name = "jingshs"
+database_id = "9a009ded-c5c2-4505-ae58-87233726b5d7"
+migrations_dir = "node_modules/nuxtcms/server/database/migrations"
 
 # R2 bucket for media/attachments.
 # Create it once with:  pnpm exec wrangler r2 bucket create nuxtcms-media

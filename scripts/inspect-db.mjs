@@ -1,6 +1,6 @@
 import { createClient } from '@libsql/client'
 
-const dbPath = process.env.DATABASE_URL || 'file:.data/tbseo.sqlite'
+const dbPath = process.env.DATABASE_URL || 'file:.data/jingsh.sqlite'
 console.log('db', dbPath)
 const db = createClient({ url: dbPath })
 

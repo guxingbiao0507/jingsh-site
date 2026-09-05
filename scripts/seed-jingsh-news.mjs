@@ -14,7 +14,7 @@ if (existsSync(envFile)) {
   }
 }
 
-const db = createClient({ url: process.env.DATABASE_URL || 'file:.data/tbseo.sqlite' })
+const db = createClient({ url: process.env.DATABASE_URL || 'file:.data/jingsh.sqlite' })
 
 const posts = [
   {

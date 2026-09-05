@@ -201,3 +201,11 @@ export const footer = {
     en: 'Copyright ©1994-2025 JINGSH LAW FIRM ALL RIGHTS RESERVED.',
   },
 }
+
+/** Used by nuxtcms cases pages (build compatibility). */
+export const stats = [
+  { value: '9000', suffix: '+', label: { zh: '执业律师', en: 'Lawyers' } },
+  { value: '50', suffix: '+', label: { zh: '国家与地区', en: 'Countries & Regions' } },
+  { value: '100', suffix: '+', label: { zh: '全球办公室', en: 'Global Offices' } },
+  { value: '30', suffix: '+', label: { zh: '年专业经验', en: 'Years of Experience' } },
+]
