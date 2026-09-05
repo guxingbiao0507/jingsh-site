@@ -108,7 +108,7 @@ await ensureLocalSchema(localUrl)
 
 console.log('\n═══ Step 2: Seed local database ═══')
 run('node scripts/seed-jingsh-site.mjs', { DATABASE_URL: localUrl })
-run('node scripts/seed-jingsh-news.mjs', { DATABASE_URL: localUrl })
+run('node scripts/sync-jingsh-news.mjs', { DATABASE_URL: localUrl })
 
 console.log('\n═══ Step 3: Export local CMS data ═══')
 const db = createClient({ url: localUrl })

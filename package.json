@@ -12,7 +12,9 @@
     "upload:r2": "node scripts/upload-r2-assets.mjs",
     "postinstall": "nuxt prepare",
     "fetch:assets": "node scripts/fetch-jingsh-assets.mjs",
+    "scrape:news": "node scripts/scrape-jingsh-news.mjs",
     "seed:news": "node scripts/seed-jingsh-news.mjs",
+    "sync:news": "node scripts/sync-jingsh-news.mjs",
     "seed:site": "node scripts/seed-jingsh-site.mjs",
     "seed:cloudflare": "node scripts/seed-cloudflare.mjs"
   },
