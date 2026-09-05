@@ -2,10 +2,12 @@
   "name": "jingsh-site",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@8.15.9",
   "scripts": {
     "dev": "cross-env DATABASE_URL=file:.data/jingsh.sqlite DATABASE_NAME=jingsh nuxt dev",
     "build": "nuxt build",
     "build:cf": "cross-env NITRO_PRESET=cloudflare_pages nuxt build && node node_modules/nuxtcms/scripts/patch-worker.mjs",
+    "pages:build": "nuxt build",
     "deploy": "node scripts/cf-prep.mjs && node scripts/sync-assets.mjs && node node_modules/nuxtcms/scripts/deploy.mjs",
     "deploy:migrate": "node scripts/cf-prep.mjs && node scripts/sync-assets.mjs && node node_modules/nuxtcms/scripts/deploy.mjs --migrate",
     "sync:assets": "node scripts/sync-assets.mjs",
@@ -44,5 +46,8 @@
     "drizzle-kit": "^0.18.1",
     "workerd": "^1.20260813.1",
     "wrangler": "^4.110.0"
+  },
+  "pnpm": {
+    "neverBuiltDependencies": ["better-sqlite3"]
   }
 }

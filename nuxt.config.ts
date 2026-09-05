@@ -3,6 +3,9 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+const isCloudflarePages =
+  process.env.NITRO_PRESET === 'cloudflare_pages' || process.env.CF_PAGES === '1'
+
 export default defineNuxtConfig({
   extends: ['nuxtcms'],
 
@@ -90,7 +93,8 @@ gtag('config', 'G-T7LDC2SCF5');`,
   },
 
   nitro: {
-    alias: process.env.NITRO_PRESET === 'cloudflare_pages'
+    preset: isCloudflarePages ? 'cloudflare_pages' : undefined,
+    alias: isCloudflarePages
       ? { 'better-sqlite3': resolve(__dirname, 'server/utils/better-sqlite3-stub') }
       : {},
   },
