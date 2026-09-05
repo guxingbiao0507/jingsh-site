@@ -169,6 +169,7 @@ pnpm dev                      # http://localhost:3000
 
 - 索引：`/sitemap_index.xml`
 - 分语言：`/__sitemap__/en.xml`、`/__sitemap__/cn.xml`
+- 索引中每个子 sitemap 含 **`lastmod`**（取该语言下最新 URL 更新时间，由 `server/plugins/sitemap-index-lastmod.ts` 注入）
 - 数据源：`server/api/__sitemap__/urls.get.ts`（首页、新闻列表、已发布博客）
 - 每条 URL 含 **`lastmod`**（文章用 `updated_at`，无效时回退 `published_at`；首页/新闻列表用最新内容时间）
 - 含 `hreflang`  alternate（`en`、`zh-CN`、`x-default`）
