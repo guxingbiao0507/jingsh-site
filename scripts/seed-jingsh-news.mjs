@@ -62,7 +62,7 @@ async function getAuthorId() {
 async function upsertPost(categoryId, authorId, post) {
   const ts = Math.floor(new Date(post.publishedAt).getTime() / 1000)
   const publishedAt = Number.isFinite(ts) ? ts : Math.floor(Date.now() / 1000)
-  const now = new Date().toISOString()
+  const now = Math.floor(Date.now() / 1000)
   const locale = post.locale || 'en'
 
   const existing = await db.execute(
