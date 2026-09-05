@@ -58,6 +58,11 @@ const favicon = '/assets/themes/jingsh/images/logo.png'
 useHead(() => ({
   htmlAttrs: { lang: htmlLang.value },
   title: siteTitle.value,
+  // Override nuxtcms/@nuxtjs/seo default (`%s %separator %siteName` → … | NuxtCMS).
+  titleTemplate: (titleChunk) => {
+    const name = siteTitle.value
+    return titleChunk ? `${titleChunk} · ${name}` : name
+  },
   link: [
     { rel: 'icon', type: 'image/png', href: favicon, key: 'favicon' },
     { rel: 'shortcut icon', type: 'image/png', href: favicon, key: 'shortcut-icon' },

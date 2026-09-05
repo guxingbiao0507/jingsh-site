@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { data: site } = await useSite()
 
 const page = ref(1)
 const pageSize = 9
@@ -15,7 +14,7 @@ const { posts, total, pending, formatDateTime } = useJingshNews({
 const totalPages = computed(() => Math.max(1, Math.ceil(total.value / pageSize)))
 
 useSeoMeta({
-  title: () => `${t('news.title')} — ${site.value?.settings.siteName || '京师北欧 / JINGSH Nordic'}`,
+  title: () => t('news.title'),
   description: () => t('news.description'),
   ogImage: '/assets/themes/jingsh/images/jingshi-top-bg.png',
 })
