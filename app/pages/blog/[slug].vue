@@ -18,7 +18,7 @@ if (error.value) {
 }
 
 if (!post.value) {
-  throw createError({ statusCode: 404, statusMessage: t('news.empty'), fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })
 }
 
 const { posts: siblingPosts, formatDate } = useJingshNews({ limit: 50, category: 'news' })

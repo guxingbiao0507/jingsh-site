@@ -68,6 +68,11 @@ gtag('config', 'G-T7LDC2SCF5');`,
     '/us/**': { redirect: { to: '/en/**', statusCode: 301 } },
     '/favicon.ico': { redirect: { to: '/assets/themes/jingsh/images/logo.png', statusCode: 301 } },
     '/favicon.svg': { redirect: { to: '/assets/themes/jingsh/images/logo.png', statusCode: 301 } },
+    '/news-blogs.html': { redirect: { to: '/en/news', statusCode: 301 } },
+    '/news-blogs/1.html': { redirect: { to: '/en/blog/jingsh-uzbekistan-tashkent-cooperative-office-was-officially-established', statusCode: 301 } },
+    '/news-blogs/2.html': { redirect: { to: '/en/blog/governor-of-irkutsk-oblast-igor-kobzev-received-jingsh-lawyers', statusCode: 301 } },
+    '/news-blogs/3.html': { redirect: { to: '/en/blog/jingsh-korea-incorporated-officially-established-in-seoul-korea', statusCode: 301 } },
+    '/news-blogs/4.html': { redirect: { to: '/en/blog/jingsh-lawyer-received-invitation-for-the-fifth-bifp-in-russia', statusCode: 301 } },
     '/**': {
       headers: {
         'Content-Security-Policy': [

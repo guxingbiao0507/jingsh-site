@@ -340,6 +340,131 @@ html.dark body {
   font-size: 1rem;
 }
 
+/* News list page — matches jingsh.fi/news-blogs.html */
+.news-list-page {
+  background: #f6f6f6;
+  min-height: 60vh;
+  padding-top: 0;
+}
+
+.news-breadcrumb {
+  padding: 16px 0 20px;
+  font-size: 0.875rem;
+  color: rgb(82, 100, 124);
+}
+
+.news-breadcrumb a {
+  color: rgb(82, 100, 124);
+  transition: color 0.2s;
+}
+
+.news-breadcrumb a:hover {
+  color: #EB9624;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.news-list-item {
+  border: 1px solid #EB9624;
+  border-radius: 24px;
+  padding: 20px;
+  min-height: 250px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.news-list-item:hover {
+  box-shadow: 0 4px 12px rgba(235, 150, 36, 0.12);
+}
+
+.news-list-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: rgb(34, 32, 29);
+  font-size: 0.95rem;
+  min-width: 200px;
+}
+
+.news-list-date-icon {
+  color: #EB9624;
+  flex-shrink: 0;
+}
+
+.news-list-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+  min-width: 0;
+}
+
+.news-list-title {
+  color: rgb(34, 32, 29);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.news-list-title:hover {
+  color: #EB9624;
+}
+
+.news-list-excerpt p {
+  color: rgb(102, 102, 102);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-list-link {
+  color: #EB9624 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .news-list-item {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .news-list-date {
+    min-width: 0;
+  }
+
+  .news-list-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* 404 error page */
+.error-page {
+  background: #fff;
+  min-height: 50vh;
+}
+
 /* Footer */
 .jingsh-footer {
   background: rgb(34, 32, 29);

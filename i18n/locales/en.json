@@ -108,6 +108,14 @@
     "ctaTitle": "Need professional legal services?",
     "ctaDesc": "Contact JINGSH Nordic for cross-border legal and compliance support."
   },
+  "error": {
+    "notFoundTitle": "Page Not Found",
+    "notFoundMessage": "The page you are looking for does not exist or may have been moved from the previous site.",
+    "genericTitle": "Something went wrong",
+    "genericMessage": "An unexpected error occurred. Please try again later.",
+    "redirectIn": "Redirecting to homepage in {seconds} seconds…",
+    "goHome": "Go to Homepage"
+  },
   "contactExtra": {
     "hotline": "Hotline",
     "mobile": "Mobile",
