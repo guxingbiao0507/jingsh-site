@@ -1,25 +1,21 @@
 # Cloudflare Pages + D1 configuration.
 #
-# 1. Create the D1 database:      pnpm exec wrangler d1 create nuxtcms
-# 2. Paste the returned database_id below.
-# 3. Apply schema to D1:          pnpm run db:migrate:remote
-# 4. Build + deploy:              pnpm run deploy
+# 1. Credentials: copy .cloudflare.env.example → .cloudflare.env
+# 2. Prep + deploy: npm run deploy:migrate
 #
-# The Nuxt server reads this binding as event.context.cloudflare.env.DB.
+# The Nuxt server reads D1 binding as event.context.cloudflare.env.DB.
 
-name = "jingsh"
+name = "jingshi"
 compatibility_date = "2025-07-15"
 compatibility_flags = ["nodejs_compat_v2"]
 pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "jingshs"
-database_id = "9a009ded-c5c2-4505-ae58-87233726b5d7"
+database_name = "jingshi"
+database_id = "fb37578b-5bb0-4358-a1c6-7631f966a4fd"
 migrations_dir = "node_modules/nuxtcms/server/database/migrations"
 
-# R2 bucket for media/attachments.
-# Create it once with:  pnpm exec wrangler r2 bucket create nuxtcms-media
 [[r2_buckets]]
 binding = "BUCKET"
-bucket_name = "jingsh"
+bucket_name = "jingshi"

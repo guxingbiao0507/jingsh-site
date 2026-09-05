@@ -27,9 +27,9 @@ const childEnv = {
   CLOUDFLARE_ACCOUNT_ID: cf.CLOUDFLARE_ACCOUNT_ID || process.env.CLOUDFLARE_ACCOUNT_ID,
 }
 
-const project = cf.CF_PAGES_PROJECT || 'jingsh'
-const database = cf.CF_D1_DATABASE || 'jingshs'
-const bucket = dotenv.NUXT_CF_R2_BUCKET || cf.CF_R2_BUCKET || 'jingsh'
+const project = cf.CF_PAGES_PROJECT || 'jingshi'
+const database = cf.CF_D1_DATABASE || 'jingshi'
+const bucket = cf.CF_R2_BUCKET || dotenv.NUXT_CF_R2_BUCKET || 'jingshi'
 
 function run(cmd, { allowFail = false } = {}) {
   const res = spawnSync(cmd, { cwd: root, shell: true, encoding: 'utf8', env: childEnv })
@@ -105,6 +105,9 @@ const secrets = {
   NUXT_API_DOCS_KEY: dotenv.NUXT_API_DOCS_KEY,
   NUXT_PUBLIC_SITE_URL: (dotenv.NUXT_PUBLIC_SITE_URL || 'https://www.jingsh.fi').replace(/\/$/, ''),
 }
+
+console.log(`  Pages URL: https://${project}.pages.dev`)
+console.log(`  Site URL:  ${secrets.NUXT_PUBLIC_SITE_URL}`)
 
 for (const [key, value] of Object.entries(secrets)) {
   if (!value) continue
