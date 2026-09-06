@@ -17,28 +17,30 @@ function toggleMobile() {
   <div class="min-h-screen bg-white">
     <header class="jingsh-header">
       <div class="jingsh-container max-lg:h-[60px]">
-        <nav class="flex items-center justify-between h-16 md:h-20 pr-5 md:pr-0">
-          <NuxtLink :to="localePath('/')" class="flex items-center gap-2 shrink-0">
-            <img
-              src="/assets/themes/jingsh/images/logo.png"
-              :alt="li('京师律师事务所', 'Jingsh Law Firm Logo')"
-              class="h-12 md:h-16"
-            />
-            <span class="text-white text-2xl font-bold max-lg:text-sm whitespace-nowrap">
-              {{ li('京师北欧 / JINGSH Nordic', '京师北欧 / JINGSH Nordic') }}
-            </span>
-          </NuxtLink>
+        <nav class="jingsh-header-nav">
+          <div class="jingsh-header-main">
+            <NuxtLink :to="localePath('/')" class="jingsh-header-brand shrink-0">
+              <img
+                src="/assets/themes/jingsh/images/logo.png"
+                :alt="li('京师律师事务所', 'Jingsh Law Firm Logo')"
+                class="h-12 md:h-16"
+              />
+              <span class="text-white text-2xl font-bold max-lg:text-sm whitespace-nowrap">
+                {{ li('京师北欧 / JINGSH Nordic', '京师北欧 / JINGSH Nordic') }}
+              </span>
+            </NuxtLink>
 
-          <div class="hidden lg:flex items-center gap-1 list-none">
-            <NuxtLink :to="localePath('/')" class="jingsh-nav-link">
-              {{ li('首页', 'Home') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/news')" class="jingsh-nav-link">
-              {{ li('新闻资讯', 'News & Blogs') }}
-            </NuxtLink>
+            <div class="hidden lg:flex items-center gap-1">
+              <NuxtLink :to="localePath('/')" class="jingsh-nav-link">
+                {{ li('首页', 'Home') }}
+              </NuxtLink>
+              <NuxtLink :to="localePath('/news')" class="jingsh-nav-link">
+                {{ li('新闻资讯', 'News & Blogs') }}
+              </NuxtLink>
+            </div>
           </div>
 
-          <div class="jingsh-lang-switch hidden lg:flex items-center text-white mr-4">
+          <div class="jingsh-lang-switch hidden lg:flex items-center text-white">
             <NuxtLink
               :to="switchLocalePath('en')"
               :class="{ 'lang-current': locale === 'en' }"
@@ -49,7 +51,7 @@ function toggleMobile() {
               :to="switchLocalePath('cn')"
               :class="{ 'lang-current': locale === 'cn' }"
               title="中文版本"
-            >中文</NuxtLink>
+            >CN</NuxtLink>
           </div>
 
           <button
@@ -73,7 +75,7 @@ function toggleMobile() {
           <div class="py-2 border-b border-gray-200 mb-2 text-sm font-semibold">
             <NuxtLink :to="switchLocalePath('en')" class="text-[#1e40af]" @click="mobileOpen = false">EN</NuxtLink>
             <span class="px-2 text-gray-500">/</span>
-            <NuxtLink :to="switchLocalePath('cn')" class="text-gray-700" @click="mobileOpen = false">中文</NuxtLink>
+            <NuxtLink :to="switchLocalePath('cn')" class="text-gray-700" @click="mobileOpen = false">CN</NuxtLink>
           </div>
           <NuxtLink
             :to="localePath('/')"
@@ -126,7 +128,7 @@ function toggleMobile() {
           <div class="flex flex-col gap-y-[15px] max-lg:pl-0 list-none">
             <NuxtLink :to="localePath('/')" class="jingsh-nav-link">{{ li('首页', 'Home') }}</NuxtLink>
             <NuxtLink :to="switchLocalePath('en')" class="jingsh-nav-link">EN</NuxtLink>
-            <NuxtLink :to="switchLocalePath('cn')" class="jingsh-nav-link">中文</NuxtLink>
+            <NuxtLink :to="switchLocalePath('cn')" class="jingsh-nav-link">CN</NuxtLink>
           </div>
         </div>
         <p class="jingsh-footer-copyright">

@@ -60,6 +60,34 @@ html.dark body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+.jingsh-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .jingsh-header-nav {
+    height: 5rem;
+    padding-right: 0;
+  }
+}
+
+.jingsh-header-main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.jingsh-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .jingsh-nav-link {
   position: relative;
   padding: 0.5rem 0.75rem;
@@ -248,28 +276,26 @@ html.dark body {
   font-weight: 700;
 }
 
-/* Service cards */
-.service-main-card {
-  background: #fff;
-  width: 100%;
-  padding: 50px 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Service cards — 3 cases centered in equal columns */
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-inline: auto;
+  justify-items: center;
 }
 
 @media (max-width: 1024px) {
-  .service-main-card {
-    padding: 50px 20px;
+  .service-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-.service-sub-card {
+.service-card {
   background: #fff;
-  flex: 1;
+  width: 100%;
+  max-width: 100%;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
@@ -277,12 +303,16 @@ html.dark body {
   gap: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .service-card-title {
   color: rgb(33, 33, 33);
   font-weight: 700;
   font-size: 1.5rem;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .service-card-text {
