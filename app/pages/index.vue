@@ -166,9 +166,19 @@ onBeforeUnmount(() => {
     <!-- Services -->
     <section id="services" class="bg-[rgb(248,248,248)] py-16 md:py-12">
       <div class="jingsh-container px-4">
-        <div class="service-cards-grid">
-          <div v-for="(f, i) in features" :key="i" class="service-card">
-            <img :src="featureIcons[i]" class="w-[50px] h-[50px]" alt="">
+        <div class="service-main-card">
+          <img :src="featureIcons[0]" class="w-[50px] h-[50px]" alt="">
+          <p class="service-card-title">{{ t(features[0].title) }}</p>
+          <p class="service-card-text">
+            <template v-for="(line, j) in (lang === 'zh' ? features[0].items.zh.split('\n') : features[0].items.en.split('\n'))" :key="j">
+              • {{ line }}<br>
+            </template>
+            {{ t(features[0].sub) }}
+          </p>
+        </div>
+        <div class="flex flex-row gap-5 w-full mt-5 max-lg:flex-col">
+          <div v-for="(f, i) in features.slice(1)" :key="i" class="service-sub-card">
+            <img :src="featureIcons[i + 1]" class="w-[50px] h-[50px]" alt="">
             <p class="service-card-title">{{ t(f.title) }}</p>
             <p class="service-card-text">
               <template v-for="(line, j) in (lang === 'zh' ? f.items.zh.split('\n') : f.items.en.split('\n'))" :key="j">
